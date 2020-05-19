@@ -1,0 +1,26 @@
+# dependencies
+node_modules
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OSX
+.DS_Store
+
+# build output
+.next
+
+# now metadata
+.now
+
+# output of workbox and sw
+**/public/workbox-*.js
+**/public/workbox-*.js.map
+**/public/sw.js
+**/public/sw.js.map
+
+# keys
+.env.local

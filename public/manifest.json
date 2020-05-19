@@ -1,0 +1,23 @@
+{
+  "name": "markozxuu",
+  "short_name": "markozxuu",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/maskable_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
