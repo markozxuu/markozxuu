@@ -1147,10 +1147,15 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^14.0.1":
+"@types/node@*":
   version "14.0.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.1.tgz#5d93e0a099cd0acd5ef3d5bde3c086e1f49ff68c"
   integrity sha512-FAYBGwC+W6F9+huFIDtn43cpy7+SzG+atzRiTfdp3inUKL2hXnd4rG8hylJLIh4+hqrQy1P17kvJByE/z825hA==
+
+"@types/node@^14.0.3":
+  version "14.0.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.3.tgz#57bcb277f753a3dabfa56cea0a93288aae82143c"
+  integrity sha512-a8TR2N5VEJCL9HEJrAfwv3UI1bZq50HydowDDVV6pfnY7ZwG5Pjii+nSDhrDtGW3XKMoVKOgG8zS/Kv5j399uA==
 
 "@types/nprogress@^0.2.0":
   version "0.2.0"
@@ -5844,10 +5849,10 @@ react-is@16.13.1, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-notion@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/react-notion/-/react-notion-0.5.2.tgz#5c974ffc1f14f7caf2efa1d029296817efb21a89"
-  integrity sha512-aMPrw85dXQ+nuJRSd6E1SMAF6LsUsod58qoPSgqbGlDuIVtLNgwhFTT4uKh2X/sXd/VMm+WZpYEyOz5x/yZIhQ==
+react-notion@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/react-notion/-/react-notion-0.5.3.tgz#12b7d4d835623806e8b16253664aca0b77909f1d"
+  integrity sha512-vbBphwLqv9QOCb3rtBAGpq6ssIYC37q/xKwTuchar4WR9HnEyzawif0TlY8b6GRbsCX4wdXhz0ZnJoxEdR7xkw==
   dependencies:
     prismjs "^1.20.0"
 
