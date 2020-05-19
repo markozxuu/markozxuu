@@ -1,6 +1,3 @@
-// Packages
-import fetch from 'isomorphic-fetch';
-
 export async function getSlugNotion() {
   const res = await fetch(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
