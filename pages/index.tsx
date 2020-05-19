@@ -10,12 +10,12 @@ const Index = () => (
         Started programming in late 2015 on his own. Markoz has no college
         degree, he is a strong believer in the idea that you can learn a lot
         about programming through blog readings and online courses. He created a
-        couple of <b>games</b> in unity3d and I also create some{' '}
+        couple of <b>games</b> in unity3d and also created some{' '}
         <b>applications </b>
         for the Android operating system that were published in Google play. In
         his spare time he practices photography like skateboarding.
       </p>
-      <p>Experiencie</p>
+      <p>Experience</p>
       <ul>
         <li>
           Developed the search engine to find plugins and themes for{' '}
@@ -32,7 +32,7 @@ const Index = () => (
           </a>{' '}
         </li>
       </ul>
-      <p>Develpment</p>
+      <p>Development</p>
       <ul>
         <li>
           {' '}
