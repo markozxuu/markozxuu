@@ -16,8 +16,8 @@ Here are some ideas to get you started:
 -->
 
 - 🔭 I’m currently working on Diametra
-- 🌱 I’m currently learning of images compresion to reduce bandwidth on 3G Slow connections
-- 👯 I’m currently to collaborate on ▲Vercel with vercel cli
-- 💬 Ask me about performance web and optimice
+- 🌱 I’m currently learning about images compression to reduce bandwidth on 3G Slow connections
+- 👯 I'm currently collaborating with ▲Vercel on vercel cli
+- 💬 Ask me about web performance and optimization
 - 📫 How to reach me markdrew53@gmail.com
 - ⚡ Fun fact: I love anime of Naruto
