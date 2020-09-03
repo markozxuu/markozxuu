@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 - 🔭 I’m currently working at Diametra
-- 🌱 I’m currently learning about three.js to deliver enjoyable experiences using the power of WebGl
+- 🌱 I’m currently learning about three.js to deliver enjoyable experiences using the power of WebGL
 - 👨‍💻 I'm currently collaborating with ▲Vercel on vercel cli and Next.js
 - 💬 Ask me about web performance and optimization
 - 📫 How to reach me markdrew53@gmail.com
