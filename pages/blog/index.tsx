@@ -15,7 +15,7 @@ type NotionData = {
   Slug: string[];
   Date: string;
   Page: string;
-  Authors: object;
+  Authors: any;
 };
 
 interface BlogProps {
@@ -92,8 +92,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       notionData: data,
     },
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    unstable_revalidate: 1,
+    revalidate: 1,
   };
 };
 
