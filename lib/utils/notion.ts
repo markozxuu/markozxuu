@@ -4,6 +4,7 @@ export async function getSlugNotion() {
     {
       headers: {
         Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -23,6 +24,7 @@ export async function getNotion() {
     {
       headers: {
         Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -36,6 +38,7 @@ export async function getBlogIndex(id: any) {
     {
       headers: {
         Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -51,6 +54,7 @@ export async function getContentNotion(id: any) {
   const res = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
     headers: {
       Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+      pragma: 'no-cache',
     },
   });
   const data = await res.json();
