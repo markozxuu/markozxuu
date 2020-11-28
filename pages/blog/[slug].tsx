@@ -1,14 +1,15 @@
 // Packages
+import Head from 'next/head';
+import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { NotionRenderer, BlockMapType } from 'react-notion';
-import Head from 'next/head';
 
 // Utils
 import {
   getSlugNotion,
   getContentNotion,
   getBlogIndex,
-} from '../../lib/utils/notion';
+} from '@lib/utils/notion';
 
 // Components
 import Layout from '@components/Layout';
@@ -27,19 +28,31 @@ type Author = {
   authorData: AuthorData;
 };
 
-interface PostProps {
+interface Props {
   notionData: BlockMapType;
   author: Author;
   title: string;
+  preview: boolean;
+  published: boolean;
 }
 
-const Post = (props: PostProps) => {
-  const { notionData, author, title } = props;
+const Post = (props: Props) => {
+  const { notionData, author, title, preview, published } = props;
+  console.log('Published', published);
   return (
     <Layout>
       <Head>
         <title>{title}</title>
       </Head>
+      {preview && (
+        <div>
+          <span>Preview mode enable</span>
+          <Link href="/api/clear-preview">
+            <button>Exit preview</button>
+          </Link>
+        </div>
+      )}
+      {!published && <span style={{ color: 'red' }}>Draft</span>}
       <Author {...author} />
       <NotionRenderer blockMap={notionData} />
     </Layout>
@@ -54,20 +67,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
   const page = await getBlogIndex(params?.slug);
   const author = { date: page[0].Date, authorData: page[0].Authors[0] };
   const title = page[0].Page;
   const content = await getContentNotion(page[0].id);
-  console.log(page);
+  console.log('Payload page', page);
   return {
     props: {
       notionData: content,
       author,
       title,
+      published: page[0]?.Published ?? false,
+      preview: preview ?? false,
     },
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    unstable_revalidate: 1,
+    revalidate: 1,
   };
 };
 
