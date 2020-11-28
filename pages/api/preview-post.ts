@@ -30,7 +30,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(404).json({
       error: {
         code: 'not_found',
-        message: `No post found for ${post}`,
+        message: `No post found for ${req.query.slug}`,
       },
     });
   }
