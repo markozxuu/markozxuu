@@ -3,7 +3,7 @@ export async function getSlugNotion() {
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -17,12 +17,12 @@ export async function getSlugNotion() {
   });
 }
 
-export async function getNotion() {
+export async function getPostList() {
   const res = await fetch(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -35,7 +35,7 @@ export async function getBlogIndex(id: any) {
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        pragma: 'no-cache',
       },
     }
   );
@@ -50,7 +50,7 @@ export async function getBlogIndex(id: any) {
 export async function getContentNotion(id: any) {
   const res = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
     headers: {
-      Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+      pragma: 'no-cache',
     },
   });
   const data = await res.json();

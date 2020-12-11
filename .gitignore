@@ -13,8 +13,8 @@ yarn-error.log*
 # build output
 .next
 
-# now metadata
-.now
+# vercel metadata
+.vercel
 
 # output of workbox and sw
 **/public/workbox-*.js

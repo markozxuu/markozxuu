@@ -7,33 +7,51 @@ import Layout from '@components/Layout';
 import Date from '@components/Date';
 
 // Utils
-import { getNotion } from '../../lib/utils/notion';
+import { getPostList } from '../../lib/utils/notion';
 
 type NotionData = {
   id: string;
-  Published: boolean;
+  Published: boolean | undefined;
   Slug: string[];
   Date: string;
   Page: string;
-  Authors: object;
+  Authors: any;
 };
 
-interface BlogProps {
-  notionData: NotionData[];
+interface Props {
+  posts: NotionData[];
+  preview: boolean;
 }
 
-const Blog = (props: BlogProps) => {
-  const { notionData } = props;
+const Blog = ({ posts, preview }: Props) => {
+  if (!posts.length) {
+    return (
+      <div>
+        <h1>There are no posts yet</h1>
+      </div>
+    );
+  }
   return (
     <Layout>
+      {preview && (
+        <div>
+          <span>Preview mode enable</span>
+          <Link href="/api/clear-preview">
+            <button>Exit preview</button>
+          </Link>
+        </div>
+      )}
       <ul>
-        {notionData.map((post) => (
+        {posts.map((post) => (
           <li key={post.id}>
             <span>
               <Date dateStirng={post.Date} isUpperCase />
             </span>
             <Link href="/blog/[slug]" as={`/blog/${post.Slug}`}>
-              <a>{post.Page}</a>
+              <a>
+                {!post.Published && <span style={{ color: 'red' }}>Draft</span>}
+                {post.Page}
+              </a>
             </Link>
           </li>
         ))}
@@ -84,16 +102,15 @@ const Blog = (props: BlogProps) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const data = await getNotion();
-  console.log('Esta es la data');
-  console.log(data);
+export const getStaticProps: GetStaticProps = async ({ preview }) => {
+  const data: NotionData[] = await getPostList();
+  const posts = preview ? data : data.filter((post) => Boolean(post.Published));
   return {
     props: {
-      notionData: data,
+      posts,
+      preview: preview ?? false,
     },
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    unstable_revalidate: 1,
+    revalidate: 1,
   };
 };
 
