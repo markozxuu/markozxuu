@@ -1,21 +1,23 @@
 // Packages
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
-// Components
-import Logo from './icons/Logo';
-import Moon from './icons/Moon';
-import Sun from './icons/Sun';
-
-// Hooks
-import { useTheme } from '../hooks/useTheme';
+// Icons
+import Logo from '@components/icons/Logo';
+import Moon from '@components/icons/Moon';
+import Sun from '@components/icons/Sun';
+import System from '@components/icons/System';
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, memoizedTheme } = useTheme();
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [mounted, setMounted] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+  if (!mounted) {
+    return null;
+  }
+  console.log('The value theme is');
+  console.log(theme);
   return (
     <header>
       <Link href="/">
@@ -40,9 +42,9 @@ const Header = () => {
             <a href="https://github.com/markozxuu/markozxuu">Source</a>
           </li>
           <li>
-            <p onClick={memoizedTheme}>
-              {mounted ? theme === 'light' ? <Moon /> : <Sun /> : null}
-            </p>
+            <button onClick={() => setTheme('dark')}>dark</button>
+            <button onClick={() => setTheme('light')}>light</button>
+            <button onClick={() => setTheme('system')}>Sytem</button>
           </li>
         </ul>
       </nav>
