@@ -14,6 +14,7 @@
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.1.0",
     "date-fns": "^2.16.1",
     "lodash.debounce": "^4.0.8",
