@@ -1,4 +1,11 @@
-@import './theme.css';
-@import './typography.css';
-@import './reset.css';
-@import './nprogress.css';
+@tailwind base;
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white dark:bg-black-vercel text-black-vercel dark:text-white;
+  }
+
+@tailwind components;
+@tailwind utilities;
