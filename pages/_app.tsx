@@ -1,12 +1,14 @@
 // Packages
 import { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 import Router from 'next/router';
 import nprogress from 'nprogress';
 import debounce from 'lodash.debounce';
 
+// Components
+import Head from '@components/Head';
+
 // Styles
-import 'react-notion/src/styles.css';
-import 'prismjs/themes/prism-tomorrow.css';
 import '@styles/global.css';
 
 // Only show nprogress after 500ms (slow loading)
@@ -24,7 +26,17 @@ Router.events.on('routeChangeError', () => {
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+  <>
+    <Head />
+    <ThemeProvider
+      forcedTheme={(Component as any).theme || undefined}
+      attribute="class"
+      enableSystem={true}
+      defaultTheme="white"
+    >
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </>
 );
 
 export default MyApp;
