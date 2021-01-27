@@ -1,12 +1,11 @@
 // Components
 import Layout from '@components/Layout';
-import Content from '@components/Content';
 
 const Index = () => (
   <Layout>
-    <h1 style={{ fontSize: '2.5rem', fontWeight: 600 }}>Markoz Peña</h1>
-    <Content>
-      <p>
+    <main className="max-w-xl p-4 mx-auto">
+      <h1 className="text-4xl font-semibold mb-8">Markoz Peña</h1>
+      <p className="text-lg leading-loose">
         Started programming in late 2015 on his own. Markoz has no college
         degree, he is a strong believer in the idea that you can learn a lot
         about programming through blog readings and online courses. He created a
@@ -15,11 +14,16 @@ const Index = () => (
         for the Android operating system that were published in Google play. In
         his spare time he practices photography like skateboarding.
       </p>
-      <p>Experience</p>
-      <ul>
+      <p className="text-lg mt-5">Experience</p>
+      <ul className="list-disc px-10 text-lg mt-4">
         <li>
           Developed the search engine to find plugins and themes for{' '}
-          <a href="https://hyper.is" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://hyper.is"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
+          >
             hyper.is
           </a>{' '}
           a product of{' '}
@@ -27,46 +31,50 @@ const Index = () => (
             href="https://vercel.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
             vercel.com
           </a>{' '}
         </li>
       </ul>
-      <p>Development</p>
-      <ul>
+      <p className="text-lg mt-5">Development</p>
+      <ul className="list-disc px-10 text-lg mt-4">
         <li>
           {' '}
           <a
             href="https://apkpure.com/es/photo-mark/merix.selfidix"
             rel="noopener noreferrer"
             target="_blank"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
             <em>Photo Mark</em>
           </a>{' '}
-          an application of photography developed in Java
+          an application of photography
         </li>
         <li>
           <a
             href="https://play.google.com/store/apps/details?id=com.expresoStudy"
             rel="noopener noreferrer"
             target="_blank"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
             <em>Jumper Man</em>
           </a>{' '}
-          a game developed in C# using Unity3d
+          a game
         </li>
         <li>
           <a
             href="https://apkpure.com/es/material-timer/merix.cronometro3"
             rel="noopener noreferrer"
             target="_blank"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
             <em>Material cronometro</em>
           </a>{' '}
-          an application developed in Java
+          an application
         </li>
       </ul>
-    </Content>
+    </main>
   </Layout>
 );
 
