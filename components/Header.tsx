@@ -1,23 +1,13 @@
 // Packages
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
 
 // Icons
 import Logo from '@components/icons/Logo';
-import Moon from '@components/icons/Moon';
-import Sun from '@components/icons/Sun';
-import System from '@components/icons/System';
+
+// Components
+import Select from '@components/Select';
 
 const Header = () => {
-  const [mounted, setMounted] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
-  useEffect(() => setMounted(true), []);
-  if (!mounted) {
-    return null;
-  }
-  console.log('The value theme is');
-  console.log(theme);
   return (
     <header>
       <Link href="/">
@@ -26,29 +16,25 @@ const Header = () => {
         </a>
       </Link>
       <nav>
-        <ul>
+        <ul className="space-x-4 flex items-center justify-center">
           <li>
             <Link href="/blog">
               <a>Blog</a>
             </Link>
           </li>
           <li>
-            <a href="mailto:markdrew53@gmail.com">Email</a>
+            <a
+              className="bg-black-vercel rounded-md p-2 capitalize text-white dark:bg-white dark:text-black-vercel font-semibold"
+              href="https://twitter.com/markozxuu"
+            >
+              follow me
+            </a>
           </li>
           <li>
-            <a href="https://twitter.com/markozxuu">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/markozxuu/markozxuu">Source</a>
-          </li>
-          <li>
-            <button onClick={() => setTheme('dark')}>dark</button>
-            <button onClick={() => setTheme('light')}>light</button>
-            <button onClick={() => setTheme('system')}>Sytem</button>
+            <Select />
           </li>
         </ul>
       </nav>
-
       <style jsx>{`
         nav {
           padding: 10px 0 10px 5px;
@@ -81,9 +67,6 @@ const Header = () => {
             max-width: 42rem;
             margin: auto;
             padding: 20px 0;
-          }
-          a:hover {
-            border-radius: 0.25rem;
           }
           header {
             display: flex;
