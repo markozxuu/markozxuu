@@ -29,7 +29,7 @@ const Author = (props: AuthorProps) => {
       </a>
       <p className="date">
         <span className="sep" />
-        <Date dateStirng={date} isUpperCase={false} />
+        <Date date={date} />
       </p>
       <style jsx>{`
         .meta {
