@@ -7,7 +7,7 @@ import Layout from '@components/Layout';
 import Date from '@components/Date';
 
 // Utils
-import { getPostList } from '../../lib/utils/notion';
+import { getPostList } from '@lib/utils/notion';
 
 type NotionData = {
   id: string;
@@ -26,78 +26,56 @@ interface Props {
 const Blog = ({ posts, preview }: Props) => {
   if (!posts.length) {
     return (
-      <div>
-        <h1>There are no posts yet</h1>
-      </div>
+      <Layout>
+        <div className="max-w-xl p-4 mx-auto">
+          <h1 className="text-3xl font-semibold mb-12">
+            There are no posts yet :(
+          </h1>
+        </div>
+      </Layout>
     );
   }
   return (
     <Layout>
       {preview && (
-        <div>
-          <span>Preview mode enable</span>
-          <Link href="/api/clear-preview">
-            <button>Exit preview</button>
-          </Link>
+        <div className="max-w-xl p-4 mx-auto">
+          <div className="flex flex-col items-start">
+            <span className="mb-5 font-medium">Preview mode enable</span>
+            <Link href="/api/clear-preview">
+              <button className="rounded-md dark:bg-yellow-600 bg-yellow-500 text-white transition-colors duration-200 p-2 w-28 capitalize font-semibold">
+                Exit preview
+              </button>
+            </Link>
+          </div>
         </div>
       )}
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <span>
-              <Date dateStirng={post.Date} isUpperCase />
-            </span>
-            <Link href="/blog/[slug]" as={`/blog/${post.Slug}`}>
-              <a>
-                {!post.Published && <span style={{ color: 'red' }}>Draft</span>}
-                {post.Page}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <style jsx>{`
-        ul {
-          list-style: none;
-        }
-        ul li {
-          padding: 10px 15px;
-        }
-        ul li span {
-          display: block;
-          font-size: 13px;
-        }
-        ul li a {
-          text-decoration: none;
-        }
-        span {
-          font-weight: 600;
-        }
-        @media (min-width: 500px) {
-          ul {
-            padding: 20px 0;
-            max-width: 42rem;
-            margin: auto;
-          }
-          ul li {
-            padding-left: 0;
-          }
-          ul li a {
-            padding: 10px 15px;
-            transition: 150ms background-color ease-in;
-          }
-          ul li a:hover {
-            border-radius: 0.25rem;
-          }
-          ul li span {
-            display: inline-block;
-            width: 160px;
-            padding-right: 10px;
-            text-align: right;
-            font-size: inherit;
-          }
-        }
-      `}</style>
+      <div className="max-w-xl px-4 pt-10 pb-32 mx-auto">
+        <h2 className="text-3xl font-semibold mb-12">Posts</h2>
+        <div className="border-b border-accent-3 dark:border-accent-2">
+          {posts.map((post) => (
+            <div
+              key={post.id}
+              className="border-t border-accent-3 dark:border-accent-2"
+            >
+              <Link href="/blog/[slug]" as={`/blog/${post.Slug}`}>
+                <a className="block py-3 sm:py-4">
+                  <div className="flex flex-col md:flex-row md:items-center items-start">
+                    <Date date={post.Date} />
+                    <span className="font-semibold hover:underline">
+                      {post.Page}
+                    </span>
+                    {!post.Published && (
+                      <span className="dark:text-red-dark text-red-light md:ml-10 font-bold">
+                        Draft
+                      </span>
+                    )}
+                  </div>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };
