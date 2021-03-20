@@ -41,20 +41,28 @@ const Post = (props: Props) => {
   console.log('Published', published);
   return (
     <Layout>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      {preview && (
-        <div>
-          <span>Preview mode enable</span>
-          <Link href="/api/clear-preview">
-            <button>Exit preview</button>
-          </Link>
-        </div>
-      )}
-      {!published && <span style={{ color: 'red' }}>Draft</span>}
-      <Author {...author} />
-      <NotionRenderer blockMap={notionData} />
+      <div className="max-w-2xl px-4 mx-auto mt-7">
+        <Head>
+          <title>{title}</title>
+        </Head>
+        {preview && (
+          <div className="flex flex-col">
+            <span className="mb-5 font-medium">Preview mode enable</span>
+            <Link href="/api/clear-preview">
+              <button className="rounded-md dark:bg-yellow-600 bg-yellow-500 text-white transition-colors duration-200 p-2 w-28 capitalize font-semibold mb-5">
+                Exit preview
+              </button>
+            </Link>
+          </div>
+        )}
+        <Author {...author} />
+        {!published && (
+          <span className="dark:text-red-dark text-red-light font-bold">
+            Draft
+          </span>
+        )}
+        <NotionRenderer blockMap={notionData} />
+      </div>
     </Layout>
   );
 };
