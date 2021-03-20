@@ -1,11 +1,12 @@
 @tailwind base;
+@import './font.css';
 
 body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @apply bg-white dark:bg-black-vercel text-black-vercel dark:text-white;
-  }
+}
 
 @tailwind components;
 @tailwind utilities;
