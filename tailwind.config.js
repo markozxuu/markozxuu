@@ -19,6 +19,13 @@ module.exports = {
         'code-white': '#fafafa',
       },
       fontFamily: {
+        inter: [
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+        ],
         cascadiaCode: [
           'Cascadia Code',
           '-apple-system',
