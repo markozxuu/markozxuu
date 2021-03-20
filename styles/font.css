@@ -1,0 +1,72 @@
+/*  Cascadia Code  */
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260551/markozxuu/fonts/Cascadia%20Code/CascadiaMonoPL-Light_oyyu1i.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 200;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260551/markozxuu/fonts/Cascadia%20Code/CascadiaMonoPL-Light_oyyu1i.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260551/markozxuu/fonts/Cascadia%20Code/CascadiaMonoPL-Light_oyyu1i.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260583/markozxuu/fonts/Cascadia%20Code/CascadiaCodePL-Regular_vajezl.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260591/markozxuu/fonts/Cascadia%20Code/CascadiaCodePL-SemiBold_p2ukxw.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260595/markozxuu/fonts/Cascadia%20Code/CascadiaMono-Bold_pehctz.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 800;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260595/markozxuu/fonts/Cascadia%20Code/CascadiaMono-Bold_pehctz.woff2)
+  format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(https://res.cloudinary.com/diametra/raw/upload/v1616260595/markozxuu/fonts/Cascadia%20Code/CascadiaMono-Bold_pehctz.woff2)
+  format('woff2');
+}
