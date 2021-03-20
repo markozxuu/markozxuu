@@ -10,6 +10,9 @@ import Head from '@components/Head';
 
 // Styles
 import '@styles/global.css';
+import 'react-notion/src/styles.css';
+import '@styles/notion.css';
+import '@styles/syntax.css';
 
 // Only show nprogress after 500ms (slow loading)
 const start = debounce(nprogress.start, 500);
