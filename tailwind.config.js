@@ -18,6 +18,15 @@ module.exports = {
         'code-dark': '#1a1a1a',
         'code-white': '#fafafa',
       },
+      fontFamily: {
+        cascadiaCode: [
+          'Cascadia Code',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+        ],
+      },
     },
   },
   variants: {
