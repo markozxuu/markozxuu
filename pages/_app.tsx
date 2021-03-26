@@ -31,17 +31,15 @@ Router.events.on('routeChangeError', () => {
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
+  <ThemeProvider
+    disableTransitionOnChange
+    forcedTheme={(Component as any).theme || undefined}
+    attribute="class"
+    defaultTheme="light"
+  >
     <Head />
-    <ThemeProvider
-      forcedTheme={(Component as any).theme || undefined}
-      attribute="class"
-      enableSystem={true}
-      defaultTheme="white"
-    >
-      <Component {...pageProps} />
-    </ThemeProvider>
-  </>
+    <Component {...pageProps} />
+  </ThemeProvider>
 );
 
 export default MyApp;
