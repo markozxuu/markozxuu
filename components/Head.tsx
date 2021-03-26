@@ -1,37 +1,65 @@
 // Packages
 import NextHead from 'next/head';
+import { useTheme } from 'next-themes';
 
-const APP_NAME = 'markozxuu';
-const APP_DESCRIPTION = 'Personal website and blog';
+const defaultImage =
+  'https://res.cloudinary.com/diametra/image/upload/v1616447851/markozxuu/images/markozxuu_g3sckv.png';
 
-const Head = () => {
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  children?: React.ReactNode;
+}
+
+const Head = ({
+  title = 'Markoz Peña',
+  description = "Hi, I'm Markoz. Frontend developer :)",
+  image = defaultImage,
+  children,
+}: Props) => {
+  const { systemTheme } = useTheme();
   return (
     <NextHead>
-      <title>Markoz Peña</title>
-      <meta name="application-name" content={APP_NAME} />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content={APP_NAME} />
-      <meta name="description" content={APP_DESCRIPTION} />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="theme-color" content="#FFFFFF" />
-      <meta
-        name="viewport"
-        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
+      {/* Title */}
+      <title>{title}</title>
+      <meta name="og:title" content={title} />
 
+      {/* Description */}
+      <meta name="description" content={description} />
+      <meta name="og:description" content={description} />
+
+      {/* Images */}
+      <meta name="twitter:image" content={image} />
+      <meta name="og:image" content={image} />
+
+      {/* URL */}
+      <meta name="og:url" content="https://markozxuu.now.sh" />
+
+      {/* General */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@markozxuu" />
+      <meta name="apple-mobile-web-app-title" content="Markoz" />
+      <meta name="author" content="Markoz Peña" />
+
+      {/* Favicons */}
+      <meta name="theme-color" content="#000000" />
+      <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon"
-        sizes="180x180"
-        href="/icons/maskable_icon.png"
+        href="https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/180x180.png"
       />
-      <link rel="manifest" href="/manifest.json" />
-      <link rel="shortcut icon" href="/icons/favicon.ico" />
+      <link rel="manifest" href="/favicons/manifest.json" />
+
+      {/* Dynamic favicon */}
+      {systemTheme === 'dark' ? (
+        <link rel="icon" type="image/svg+xml" href="/favicons/dark.svg" />
+      ) : (
+        <link rel="icon" type="image/svg+xml" href="/favicons/light.svg" />
+      )}
+      {children}
     </NextHead>
   );
 };
