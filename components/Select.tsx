@@ -14,11 +14,10 @@ const Select = () => {
   if (!mounted) {
     return null;
   }
-  console.log(theme);
   return (
     <div className="flex items-center relative border dark:border-accent-2 hover:border-black-vercel dark:hover:border-accent-3 transition-colors duration-200 rounded-md mr-2 pl-4">
       <span className="inline-flex absolute -ml-2">
-        {theme === 'white' ? <Soun /> : null}
+        {theme === 'light' ? <Soun /> : null}
         {theme === 'dark' ? <Moon /> : null}
         {theme === 'system' ? <System /> : null}
       </span>
@@ -27,7 +26,7 @@ const Select = () => {
         onChange={(event) => setTheme(event.target.value)}
         value={theme}
       >
-        <option value="white">Light</option>
+        <option value="light">Light</option>
         <option value="dark">Dark</option>
         <option value="system">System</option>
       </select>
