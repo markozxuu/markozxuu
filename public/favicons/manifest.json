@@ -2,6 +2,8 @@
    "name": "Markoz",
    "short_name": "Mark",
    "background_color": "#000",
+   "theme_color": "#000",
+   "display": "standalone",
    "icons": [
        {
            "sizes": "192x192",
