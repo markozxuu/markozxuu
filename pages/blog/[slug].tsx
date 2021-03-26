@@ -1,5 +1,4 @@
 // Packages
-import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { NotionRenderer, BlockMapType } from 'react-notion';
@@ -14,6 +13,7 @@ import {
 // Components
 import Layout from '@components/Layout';
 import Author from '@components/Author';
+import Head from '@components/Head';
 
 type AuthorData = {
   firstName: string;
