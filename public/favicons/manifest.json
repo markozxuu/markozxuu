@@ -7,8 +7,9 @@
    "icons": [
        {
            "sizes": "192x192",
-           "src": "https://assets.vercel.com/image/upload/v1573246280/front/favicon/vercel/android-chrome-192x192.png",
-           "type": "image/png"
+           "src": "https://res.cloudinary.com/diametra/image/upload/v1616893955/markozxuu/icons/maskable_icon_x192_xg4fmp.png",
+           "type": "image/png",
+           "purpose": "maskable"
        },
        {
            "sizes": "512x512",
