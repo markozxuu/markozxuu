@@ -21,7 +21,9 @@
     "paths": {
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@lib/*": ["lib/*"]
+      "@lib/*": ["lib/*"],
+      "@data/*": ["data/*"],
+      "@config": ["config/index.ts"]
     }
   },
   "exclude": [
