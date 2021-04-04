@@ -1,5 +1,7 @@
 {
   "name": "markozxuu",
+  "files": ["dist"],
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "next dev",
     "build-atom": "ncc build ./lib/utils/atom.ts",
