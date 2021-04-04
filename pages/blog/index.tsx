@@ -82,7 +82,9 @@ const Blog = ({ posts, preview }: Props) => {
 
 export const getStaticProps: GetStaticProps = async ({ preview }) => {
   const data: NotionData[] = await getPostList();
-  const posts = preview ? data : data.filter((post) => Boolean(post.Published));
+  const posts = preview
+    ? data
+    : data.filter((post) => Boolean(post.Published)).reverse();
   return {
     props: {
       posts,
