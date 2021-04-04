@@ -12,6 +12,7 @@ yarn-error.log*
 
 # build output
 .next
+/dist
 
 # vercel metadata
 .vercel
