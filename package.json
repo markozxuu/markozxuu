@@ -4,9 +4,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "dev": "next dev",
-    "build-atom": "ncc build ./lib/utils/atom.ts",
-    "generated-rss": "node ./scripts/build-atom ",
-    "build": "yarn build-atom && yarn generated-rss && next build",
+    "build": "ncc build lib/utils/atom.ts && node scripts/build-atom && next build",
     "start": "next start"
   },
   "husky": {
