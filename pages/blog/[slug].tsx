@@ -10,6 +10,8 @@ import {
   getBlogIndex,
 } from '@lib/utils/notion';
 
+import { gettingMetadata } from '@lib/utils/getting-metadata';
+
 // Components
 import Layout from '@components/Layout';
 import Author from '@components/Author';
@@ -38,11 +40,11 @@ interface Props {
 
 const Post = (props: Props) => {
   const { notionData, author, title, preview, published } = props;
-  console.log('Published', published);
+  const metadata = gettingMetadata(title);
   return (
     <Layout>
       <div className="max-w-2xl px-4 mx-auto mt-7">
-        <Head>
+        <Head image={metadata?.og} description={metadata?.description}>
           <title>{title}</title>
         </Head>
         {preview && (
