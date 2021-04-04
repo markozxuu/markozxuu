@@ -16,6 +16,7 @@ yarn-error.log*
 
 # vercel metadata
 .vercel
+public/atom.xml
 
 # output of workbox and sw
 **/public/workbox-*.js
