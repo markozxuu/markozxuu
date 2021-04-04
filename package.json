@@ -2,7 +2,7 @@
   "name": "markozxuu",
   "scripts": {
     "dev": "next dev",
-    "build": "ncc ./lib/utils/atom.ts && node ./scripts/build-atom && next build",
+    "build": "ncc build ./lib/utils/atom.ts && node ./scripts/build-atom && next build",
     "start": "next start"
   },
   "husky": {
