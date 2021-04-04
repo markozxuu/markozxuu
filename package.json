@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build-atom": "ncc build ./lib/utils/atom.ts",
     "generated-rss": "node ./scripts/build-atom ",
-    "build": "yarn run build-atom && generated-rss && next build",
+    "build": "yarn run build-atom && yarn run generated-rss && next build",
     "start": "next start"
   },
   "husky": {
