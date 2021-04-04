@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /* eslint-disable @typescript-eslint/no-var-requires */
 // Eslint is not necessary to verify this file
 
