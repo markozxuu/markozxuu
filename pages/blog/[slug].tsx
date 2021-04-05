@@ -82,7 +82,6 @@ export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
   const author = { date: page[0].Date, authorData: page[0].Authors[0] };
   const title = page[0].Page;
   const content = await getContentNotion(page[0].id);
-  console.log('Payload page', page);
   return {
     props: {
       notionData: content,
