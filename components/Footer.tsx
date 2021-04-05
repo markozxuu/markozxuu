@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="px-2">
       <span className="capitalize text-sm font-medium">©Markoz peña</span>
       <a href="/atom.xml" className="underline text-sm font-medium">
         RSS
@@ -11,12 +11,13 @@ const Footer = () => {
             max-width: 42rem;
             margin: auto;
             padding: 20px;
-          }
-          footer {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
           }
+        }
+        footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
       `}</style>
     </footer>
