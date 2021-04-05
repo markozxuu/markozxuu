@@ -1,5 +1,6 @@
 {
   "name": "markozxuu",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "ncc build lib/utils/atom.ts && node scripts/build-atom.js && next build",
