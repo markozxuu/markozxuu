@@ -36,9 +36,7 @@ interface Props {
   published: boolean;
 }
 
-const Post = (props: Props) => {
-  const { notionData, author, title, preview, published } = props;
-  console.log('Published', published);
+const Post = ({ notionData, author, title, preview, published }: Props) => {
   return (
     <Layout>
       <Head>
