@@ -54,7 +54,20 @@ const Head = ({
 
       {/* Dynamic favicon */}
       {systemTheme === 'dark' ? (
-        <link rel="icon" type="image/svg+xml" href="/favicons/dark.svg" />
+        <>
+          <link
+            rel="alternate icon"
+            type="image/png"
+            href="/favicons/dark.png"
+            key="dynamic-favicon-alternate"
+          />
+          <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/favicons/dark.svg"
+            key="dynamic-favicon"
+          />
+        </>
       ) : (
         <>
           <link
