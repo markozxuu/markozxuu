@@ -46,6 +46,7 @@ const Head = ({
 
       {/* Favicons */}
       <meta name="theme-color" content="#000000" />
+      <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon"
         href="https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/180x180.png"
@@ -54,35 +55,9 @@ const Head = ({
 
       {/* Dynamic favicon */}
       {systemTheme === 'dark' ? (
-        <>
-          <link
-            rel="alternate icon"
-            type="image/png"
-            href="/favicons/dark.png"
-            key="dynamic-favicon-alternate"
-          />
-          <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/favicons/dark.svg"
-            key="dynamic-favicon"
-          />
-        </>
+        <link rel="icon" type="image/svg+xml" href="/favicons/dark.svg" />
       ) : (
-        <>
-          <link
-            rel="alternate icon"
-            type="image/png"
-            href="/favicons/light.png"
-            key="dynamic-favicon-alternate"
-          />
-          <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/favicons/light.svg"
-            key="dynamic-favicon"
-          />
-        </>
+        <link rel="icon" type="image/svg+xml" href="/favicons/light.svg" />
       )}
       {children}
     </NextHead>
