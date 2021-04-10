@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 // Components
 import Layout from '@components/Layout';
-import Date from '@components/Date';
+import DisplayDate from '@components/Date';
 
 // Utils
 import { getPostList } from '@lib/utils/notion';
@@ -19,12 +19,12 @@ type NotionData = {
 };
 
 interface Props {
-  posts: NotionData[];
+  sortPosts: NotionData[];
   preview: boolean;
 }
 
-const Blog = ({ posts, preview }: Props) => {
-  if (!posts.length) {
+const Blog = ({ sortPosts, preview }: Props) => {
+  if (!sortPosts.length) {
     return (
       <Layout>
         <div className="max-w-xl p-4 mx-auto">
@@ -52,7 +52,7 @@ const Blog = ({ posts, preview }: Props) => {
       <div className="max-w-xl px-4 pt-10 pb-32 mx-auto">
         <h2 className="text-3xl font-semibold mb-12">Posts</h2>
         <div className="border-b border-accent-3 dark:border-accent-2">
-          {posts.map((post) => (
+          {sortPosts.map((post) => (
             <div
               key={post.id}
               className="border-t border-accent-3 dark:border-accent-2"
@@ -60,7 +60,7 @@ const Blog = ({ posts, preview }: Props) => {
               <Link href="/blog/[slug]" as={`/blog/${post.Slug}`}>
                 <a className="block py-3 sm:py-4">
                   <div className="flex flex-col md:flex-row md:items-center items-start">
-                    <Date date={post.Date} />
+                    <DisplayDate date={post.Date} />
                     <span className="font-semibold hover:underline">
                       {post.Page}
                     </span>
@@ -82,12 +82,14 @@ const Blog = ({ posts, preview }: Props) => {
 
 export const getStaticProps: GetStaticProps = async ({ preview }) => {
   const data: NotionData[] = await getPostList();
-  const posts = preview
-    ? data
-    : data.filter((post) => Boolean(post.Published)).reverse();
+  const posts = preview ? data : data.filter((post) => Boolean(post.Published));
+  const sortPosts = posts.sort(
+    (a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()
+  );
+
   return {
     props: {
-      posts,
+      sortPosts,
       preview: preview ?? false,
     },
     revalidate: 1,
