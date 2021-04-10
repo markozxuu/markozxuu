@@ -36,10 +36,11 @@ interface Props {
   title: string;
   preview: boolean;
   published: boolean;
+  slug: string;
 }
 
 const Post = (props: Props) => {
-  const { notionData, author, title, preview, published } = props;
+  const { notionData, author, title, preview, published, slug } = props;
   const metadata = gettingMetadata(title);
   return (
     <Layout>
@@ -57,7 +58,7 @@ const Post = (props: Props) => {
             </Link>
           </div>
         )}
-        <Author {...author} />
+        <Author {...author} slugPage={slug} />
         {!published && (
           <span className="dark:text-red-dark text-red-light font-bold">
             Draft
@@ -86,6 +87,7 @@ export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
     props: {
       notionData: content,
       author,
+      slug: params?.slug,
       title,
       published: page[0]?.Published ?? false,
       preview: preview ?? false,
