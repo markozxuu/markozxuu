@@ -27,6 +27,7 @@
     "react-dom": "^17.0.1",
     "react-notion": "^0.9.3",
     "rss": "^1.2.2",
+    "swr": "^0.5.5",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
