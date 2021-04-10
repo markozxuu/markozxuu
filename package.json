@@ -12,7 +12,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --fix"
+    "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
