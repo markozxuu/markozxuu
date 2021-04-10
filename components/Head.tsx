@@ -44,6 +44,14 @@ const Head = ({
       <meta name="apple-mobile-web-app-title" content="Markoz" />
       <meta name="author" content="Markoz Peña" />
 
+      {/* RSS feed */}
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="RSS for feed markozxuu.sh"
+        href="/atom.xml"
+      />
+
       {/* Favicons */}
       <meta name="theme-color" content="#000000" />
       <link rel="icon" href="/favicons/favicon.ico" />
