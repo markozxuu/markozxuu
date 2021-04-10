@@ -15,7 +15,10 @@ async function generateRSS() {
   });
 
   const posts = data.filter((post) => Boolean(post.published));
-  posts.map((post) => {
+  const sortPosts = posts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+  sortPosts.map((post) => {
     const { title, description, date, slug, author } = post;
     feed.item({
       title,
