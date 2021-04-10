@@ -1,5 +1,6 @@
 // Components
 import Date from '@components/Date';
+import ViewCounter from '@components/ViewConter';
 
 // Icons
 import Divider from '@components/icons/Divider';
@@ -15,30 +16,44 @@ type AuthorData = {
 interface Props {
   date: string;
   authorData: AuthorData;
+  slugPage: string;
 }
 
-const Author = ({ date, authorData }: Props) => {
+const Author = ({ date, authorData, slugPage }: Props) => {
   const { firstName, profilePhoto } = authorData;
   return (
-    <div className="flex items-center mb-3">
-      <a
+    <div className="flex items-center mb-3 justify-between">
+      <div className="flex items-center">
+        <a
+          className="flex items-center"
+          href="https://twitter.com/markozxuu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded-full w-7 h-7 inline-flex mr-2"
+            src={profilePhoto}
+          />
+          <span className="font-semibold">{firstName}</span>
+        </a>
+        <span className="dark:text-accent-3 text-accent-5 flex items-center mx-1">
+          <Divider />
+        </span>
+        <span>
+          <Date date={date} />
+        </span>
+      </div>
+      <div
         className="flex items-center"
-        href="https://twitter.com/markozxuu"
-        target="_blank"
-        rel="noopener noreferrer"
+        style={{ fontVariantNumeric: 'tabular-nums' }}
       >
-        <img
-          className="rounded-full w-7 h-7 inline-flex mr-2"
-          src={profilePhoto}
-        />
-        <span className="font-semibold">{firstName}</span>
-      </a>
-      <span className="dark:text-accent-3 text-accent-5 flex items-center mx-1">
-        <Divider />
-      </span>
-      <span>
-        <Date date={date} />
-      </span>
+        <span
+          style={{ fontSize: 14 }}
+          className="font-medium dark:text-accent-3 text-accent-5"
+        >
+          <ViewCounter slug={slugPage} />
+        </span>
+      </div>
     </div>
   );
 };
