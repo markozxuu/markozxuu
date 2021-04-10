@@ -14,10 +14,8 @@ async function generateRSS() {
     feed_url: 'https://markozxuu.now.sh/atom.xml',
   });
 
-  const onlyPublishedPosts = data
-    .filter((post) => post.published === true)
-    .reverse();
-  onlyPublishedPosts.map((post) => {
+  const posts = data.filter((post) => Boolean(post.published));
+  posts.map((post) => {
     const { title, description, date, slug, author } = post;
     feed.item({
       title,
