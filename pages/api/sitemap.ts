@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 // Data
 import data from '@data/blog.json';
 
-const hostname = 'https://markozxuu.now.sh';
+const hostname = 'https://markozxuu.com';
 
 interface Types {
   pathname: string;
