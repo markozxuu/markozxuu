@@ -34,7 +34,7 @@ const Head = ({
       <meta name="og:image" content={image} />
 
       {/* URL */}
-      <meta name="og:url" content="https://markozxuu.now.sh" />
+      <meta name="og:url" content="https://markozxuu.com" />
 
       {/* General */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
