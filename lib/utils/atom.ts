@@ -10,8 +10,8 @@ import * as data from '@data/blog.json';
 async function generateRSS() {
   const feed = new RSS({
     title: 'Markoz Pena',
-    site_url: 'https://markozxuu.now.sh',
-    feed_url: 'https://markozxuu.now.sh/atom.xml',
+    site_url: 'https://markozxuu.com',
+    feed_url: 'https://markozxuu.com/atom.xml',
   });
 
   const posts = data.filter((post) => Boolean(post.published));
