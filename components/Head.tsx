@@ -3,7 +3,7 @@ import NextHead from 'next/head';
 import { useTheme } from 'next-themes';
 
 const defaultImage =
-  'https://res.cloudinary.com/diametra/image/upload/v1616447851/markozxuu/images/markozxuu_g3sckv.png';
+  'https://res.cloudinary.com/diametra/image/upload/f_auto,q_auto/v1618267949/markozxuu/images/markozxuu_card_kcyowr.png';
 
 interface Props {
   title?: string;
