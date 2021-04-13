@@ -1,35 +1,22 @@
-// Packages
-import React from 'react';
-import Head from 'next/head';
-
 // Components
-import Header from './Header';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
-interface LayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: Props) => {
   return (
-    <main>
-      <Head>
-        <title>Markoz Peña</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Header />
-      <style jsx>{`
-        div {
-          margin: auto;
-          padding: 4rem 1rem 0;
-          max-width: 38rem;
-        }
-      `}</style>
-      <div>{children}</div>
-    </main>
+    <>
+      <div className="min-h-screen container mx-auto">
+        <Header />
+        <div>{children}</div>
+      </div>
+      <div className="my-10">
+        <Footer />
+      </div>
+    </>
   );
 };
 

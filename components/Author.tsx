@@ -1,5 +1,9 @@
 // Components
-import Date from './Date';
+import Date from '@components/Date';
+import ViewCounter from '@components/ViewConter';
+
+// Icons
+import Divider from '@components/icons/Divider';
 
 type AuthorData = {
   firstName: string;
@@ -9,72 +13,48 @@ type AuthorData = {
   profilePhoto: string;
 };
 
-interface AuthorProps {
+interface Props {
   date: string;
   authorData: AuthorData;
+  slugPage: string;
 }
 
-const Author = (props: AuthorProps) => {
-  const { date, authorData } = props;
+const Author = ({ date, authorData, slugPage }: Props) => {
+  const { firstName, profilePhoto } = authorData;
   return (
-    <span className="meta">
-      <a
-        className="author"
-        href="https://twitter.com/markozxuu"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div className="flex items-center mb-3 justify-between">
+      <div className="flex items-center">
+        <a
+          className="flex items-center"
+          href="https://twitter.com/markozxuu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded-full w-7 h-7 inline-flex mr-2"
+            src={profilePhoto}
+          />
+          <span className="font-semibold">{firstName}</span>
+        </a>
+        <span className="dark:text-accent-3 text-accent-5 flex items-center mx-1">
+          <Divider />
+        </span>
+        <span>
+          <Date date={date} />
+        </span>
+      </div>
+      <div
+        className="flex items-center"
+        style={{ fontVariantNumeric: 'tabular-nums' }}
       >
-        <img src={authorData.profilePhoto} />
-        {authorData.firstName}
-      </a>
-      <p className="date">
-        <span className="sep" />
-        <Date dateStirng={date} isUpperCase={false} />
-      </p>
-      <style jsx>{`
-        .meta {
-          display: flex;
-          font-weight: 500;
-          align-items: center;
-        }
-        .meta .date.loading {
-          opacity: 0;
-          pointer-events: none;
-        }
-        .meta .date {
-          display: flex;
-          align-items: center;
-        }
-        .meta .date .full {
-          display: none;
-        }
-        .meta .date .sep {
-          background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNLjUgMTUuNWw3LTE1IiBzdHJva2U9IiNDOEM4QzgiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==);
-          width: 8px;
-          height: 16px;
-          margin-right: 10px;
-        }
-        .meta .author {
-          display: flex;
-          align-items: center;
-          padding-right: 10px;
-          text-decoration: none;
-        }
-        .meta .author img {
-          width: 28px;
-          height: 28px;
-          border-radius: 100%;
-          margin-right: 5px;
-        }
-        a {
-          font-weight: 600;
-        }
-        a:hover {
-          background: none;
-          color: var(--color-author);
-        }
-      `}</style>
-    </span>
+        <span
+          style={{ fontSize: 14 }}
+          className="font-medium dark:text-accent-3 text-accent-5"
+        >
+          <ViewCounter slug={slugPage} />
+        </span>
+      </div>
+    </div>
   );
 };
 

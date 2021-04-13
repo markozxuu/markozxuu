@@ -1,0 +1,20 @@
+{
+   "name": "Markoz",
+   "short_name": "Mark",
+   "background_color": "#000",
+   "theme_color": "#000",
+   "display": "standalone",
+   "icons": [
+       {
+           "sizes": "192x192",
+           "src": "https://res.cloudinary.com/diametra/image/upload/v1616893955/markozxuu/icons/maskable_icon_x192_xg4fmp.png",
+           "type": "image/png",
+           "purpose": "maskable"
+       },
+       {
+           "sizes": "512x512",
+           "src": "https://assets.vercel.com/image/upload/v1573246280/front/favicon/vercel/android-chrome-512x512.png",
+           "type": "image/png"
+       }
+   ]
+}
