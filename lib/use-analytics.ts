@@ -7,7 +7,7 @@ const useAnalytics = () => {
   const router = useRouter();
   useEffect(() => {
     Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID as string, {
-      includedDomains: ['markozxuu.com'],
+      includedDomains: ['www.markozxuu.com'],
     });
     function onRouteChangeComplete() {
       Fathom.trackPageview();
