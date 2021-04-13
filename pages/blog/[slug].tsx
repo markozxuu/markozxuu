@@ -39,8 +39,7 @@ interface Props {
   slug: string;
 }
 
-const Post = (props: Props) => {
-  const { notionData, author, title, preview, published, slug } = props;
+const Post = ({ notionData, author, title, preview, published, slug }: Props) => {
   const metadata = gettingMetadata(title);
   return (
     <Layout>
