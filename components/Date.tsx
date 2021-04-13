@@ -1,19 +1,16 @@
-// Packages
-import { parseISO, format } from 'date-fns';
+// Utils
+import dateFormat from '@lib/utils/date-format';
 
-interface DateProps {
-  dateStirng: string;
-  isUpperCase: boolean;
+interface Props {
+  date: string;
 }
 
-const Date = ({ dateStirng, isUpperCase }: DateProps) => {
-  const date = parseISO(dateStirng);
+const Date = ({ date }: Props) => {
+  const dateString = dateFormat(date);
   return (
-    <time dateTime={dateStirng}>
-      {isUpperCase
-        ? format(date, 'LLLL d, yyyy').toUpperCase()
-        : format(date, 'LLLL d, yyyy')}
-    </time>
+    <span className="text-xs mr-10 dark:text-accent-3 text-accent-5">
+      {dateString}
+    </span>
   );
 };
 

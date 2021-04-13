@@ -1,21 +1,13 @@
 // Packages
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+
+// Icons
+import Logo from '@components/icons/Logo';
 
 // Components
-import Logo from './icons/Logo';
-import Moon from './icons/Moon';
-import Sun from './icons/Sun';
-
-// Hooks
-import { useTheme } from '../hooks/useTheme';
+import Select from '@components/Select';
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, memoizedTheme } = useTheme();
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   return (
     <header>
       <Link href="/">
@@ -24,29 +16,25 @@ const Header = () => {
         </a>
       </Link>
       <nav>
-        <ul>
+        <ul className="space-x-4 flex items-center justify-center">
           <li>
             <Link href="/blog">
               <a>Blog</a>
             </Link>
           </li>
           <li>
-            <a href="mailto:markdrew53@gmail.com">Email</a>
+            <a
+              className="bg-black-vercel rounded-md p-2 capitalize text-white dark:bg-white dark:text-black-vercel font-semibold"
+              href="https://twitter.com/markozxuu"
+            >
+              follow me
+            </a>
           </li>
           <li>
-            <a href="https://twitter.com/markozxuu">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/markozxuu/markozxuu">Source</a>
-          </li>
-          <li>
-            <p onClick={memoizedTheme}>
-              {mounted ? theme === 'light' ? <Moon /> : <Sun /> : null}
-            </p>
+            <Select />
           </li>
         </ul>
       </nav>
-
       <style jsx>{`
         nav {
           padding: 10px 0 10px 5px;
@@ -79,9 +67,6 @@ const Header = () => {
             max-width: 42rem;
             margin: auto;
             padding: 20px 0;
-          }
-          a:hover {
-            border-radius: 0.25rem;
           }
           header {
             display: flex;

@@ -12,9 +12,11 @@ yarn-error.log*
 
 # build output
 .next
+/dist
 
 # vercel metadata
 .vercel
+public/atom.xml
 
 # output of workbox and sw
 **/public/workbox-*.js

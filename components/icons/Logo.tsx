@@ -1,6 +1,6 @@
 const Logo = () => (
   <span>
-    markozxuu.now.sh
+    markozxuu.com
     <style jsx>{`
       span {
         font-weight: bold;
