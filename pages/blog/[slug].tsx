@@ -64,7 +64,7 @@ const Post = ({
             </Link>
           </div>
         )}
-        <Author {...author} slugPage={slug} />
+        <Author {...author} slugPage={slug} title={title} />
         {!published && (
           <span className="dark:text-red-dark text-red-light font-bold">
             Draft
