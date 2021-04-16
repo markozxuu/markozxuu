@@ -13,6 +13,8 @@ module.exports = {
         'accent-6': '#e5e7eb',
         'accent-8': '#374151',
         'accent-9': '#999',
+        'line-gray-dark': '#444',
+        'line-gray-light': '#dedede',
         'red-light': '#FF1A1A',
         'red-dark': '#C50000',
         'code-dark': '#1a1a1a',
