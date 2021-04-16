@@ -1,5 +1,6 @@
 // Packages
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { NotionRenderer, BlockMapType } from 'react-notion';
 
@@ -47,13 +48,25 @@ const Post = ({
   published,
   slug,
 }: Props) => {
+  const { isFallback } = useRouter();
   const metadata = gettingMetadata(title);
+  if (isFallback) {
+    return (
+      <Layout>
+        <div className="max-w-2xl px-4 mx-auto mt-7">
+          <h1 className="font-bold text-4xl tracking-tight text-black dark:text-white">
+            Loading...
+          </h1>
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout>
+      <Head image={metadata?.og} description={metadata?.description}>
+        <title>{title}</title>
+      </Head>
       <div className="max-w-2xl px-4 mx-auto mt-7">
-        <Head image={metadata?.og} description={metadata?.description}>
-          <title>{title}</title>
-        </Head>
         {preview && (
           <div className="flex flex-col">
             <span className="mb-5 font-medium">Preview mode enable</span>
@@ -80,7 +93,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await getSlugNotion();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -88,10 +101,10 @@ export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
   const page = await getBlogIndex(params?.slug);
   const author = { date: page[0].Date, authorData: page[0].Authors[0] };
   const title = page[0].Page;
-  const content = await getContentNotion(page[0].id);
+  const notionData = await getContentNotion(page[0].id);
   return {
     props: {
-      notionData: content,
+      notionData,
       author,
       slug: params?.slug,
       title,
