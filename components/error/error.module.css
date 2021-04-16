@@ -1,0 +1,26 @@
+.blockquote {
+  font-style: italic;
+  margin: 0;
+  padding-left: 1rem;
+  border-left-width: 3px;
+  border-style: solid;
+}
+
+.paragraph {
+  letter-spacing: -0.33px;
+  font-size: 1.125rem;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.section > span {
+  font-size: 16rem;
+  margin: 0;
+  line-height: normal;
+  font-weight: bold;
+}
