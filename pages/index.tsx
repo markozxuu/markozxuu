@@ -92,7 +92,7 @@ const Index = () => (
           >
             res.redirect
           </a>
-          helper method to API Routes Nexts
+          helper method to API Routes Next.js
         </li>
         <li className="mt-5">
           Added Friendly error for
