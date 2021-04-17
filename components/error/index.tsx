@@ -2,7 +2,7 @@
 import Head from '@components/Head';
 import Layout from '@components/Layout';
 
-// Icon'
+// Icon
 import Vercel from '@components/icons/Vercel';
 
 // Styles
@@ -16,6 +16,7 @@ const Error = ({ status }: Props) => (
   <Layout>
     <Head>
       <title>404 — Markoz Peña</title>
+      <meta name="robots" content="noindex" />
     </Head>
     {status === 404 ? (
       <div className="max-w-xl p-4 mt-20 mx-auto">
