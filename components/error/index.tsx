@@ -9,10 +9,10 @@ import Vercel from '@components/icons/Vercel';
 import s from './error.module.css';
 
 interface Props {
-  status?: number;
+  status: number;
 }
 
-const Error = ({ status = 404 }: Props) => (
+const Error = ({ status }: Props) => (
   <Layout>
     <Head>
       <title>404 — Markoz Peña</title>
@@ -42,7 +42,9 @@ const Error = ({ status = 404 }: Props) => (
           <div>
             <Vercel />
           </div>
-          <h1 className=" text-5xl font-bold mb-5 tracking-wider">{status}</h1>
+          <h1 className="text-5xl font-bold mb-5 tracking-wider">
+            {status ?? '?'}
+          </h1>
           <p className="text-xl font-medium">An error occurred on server.</p>
         </section>
       </div>
