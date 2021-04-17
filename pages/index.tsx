@@ -16,7 +16,7 @@ const Index = () => (
       </p>
       <p className="text-lg mt-5">Experience</p>
       <ul className="list-disc px-10 text-lg mt-4">
-        <li>
+        <li className="mt-5">
           Developed the search engine to find plugins and themes for{' '}
           <a
             href="https://hyper.is"
@@ -108,7 +108,7 @@ const Index = () => (
       </ul>
       <p className="text-lg mt-5">Development</p>
       <ul className="list-disc px-10 text-lg mt-4">
-        <li>
+        <li className="mt-5">
           {' '}
           <a
             href="https://apkpure.com/es/photo-mark/merix.selfidix"
@@ -120,7 +120,7 @@ const Index = () => (
           </a>{' '}
           an application of photography
         </li>
-        <li>
+        <li className="mt-5">
           <a
             href="https://play.google.com/store/apps/details?id=com.expresoStudy"
             rel="noopener noreferrer"
@@ -131,7 +131,7 @@ const Index = () => (
           </a>{' '}
           a game
         </li>
-        <li>
+        <li className="mt-5">
           <a
             href="https://apkpure.com/es/material-timer/merix.cronometro3"
             rel="noopener noreferrer"
