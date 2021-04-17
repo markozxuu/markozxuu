@@ -12,13 +12,9 @@ const E = ({ statusCode }: Props) => {
   return <Error status={statusCode} />;
 };
 
-export const getServerSideProps = async ({ res, err }: NextPageContext) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 500;
-  return {
-    props: {
-      statusCode,
-    },
-  };
+E.getInitialProps = async ({ res }: NextPageContext) => {
+  const statusCode = res ? res.statusCode : 500;
+  return { statusCode };
 };
 
 export default E;
