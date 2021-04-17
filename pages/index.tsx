@@ -36,6 +36,75 @@ const Index = () => (
             vercel.com
           </a>{' '}
         </li>
+        <li className="mt-5">
+          Developed an{' '}
+          <a
+            href="https://amua.com.mx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
+          >
+            e-commerce
+          </a>{' '}
+          for a company with a headless approach, this with the help of Shopify
+          for data consumption and Next.js to create that incredible SSG
+          application, when it is necessary to use{' '}
+          <em className="font-medium not-italic">
+            Incremental Static Regeneration
+          </em>
+        </li>
+        <li className="mt-5">
+          I am an active contributor to ▲Vercel OSS projects like{' '}
+          <a
+            href="https://github.com/vercel/ncc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
+          >
+            ncc
+          </a>
+          ,{' '}
+          <a
+            href="https://github.com/vercel/vercel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
+          >
+            vercel-cli
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://github.com/vercel/next.js"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
+          >
+            next.js
+          </a>
+        </li>
+        <li className="mt-5">
+          Add
+          <a
+            href="https://github.com/vercel/vercel/pull/4947"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel mx-1"
+          >
+            res.redirect
+          </a>
+          helper method to API Routes Nexts
+        </li>
+        <li className="mt-5">
+          Added Friendly error for
+          <a
+            href="https://github.com/vercel/next.js/pull/15844"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-vercel dark:hover:text-gray-vercel mx-1"
+          >
+            res.redirect
+          </a>
+        </li>
       </ul>
       <p className="text-lg mt-5">Development</p>
       <ul className="list-disc px-10 text-lg mt-4">
