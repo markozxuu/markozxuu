@@ -7,5 +7,14 @@
         "date": "2020-05-18",
         "published": true,
         "author": "Markoz Peña"
+    },
+    {
+        "title": "How to format numbers in JavaScript?",
+        "description": "A common problem we have in JavaScript is how we format the numbers, We have several solutions...",
+        "og": "https://api.microlink.io/?adblock=false&meta=false&screenshot&element=%23screenshot&embed=screenshot.url&url=https%3A%2F%2Fcards.microlink.io%2F%3Fpreset%3Drauchg%26p%3D2gPCPD4KICA8Qm94CiAgICBhcz0naGVhZGVyJwogICAgc3g9e3sKICAgICAgcG9zaXRpb246ICdhYnNvbHV0ZScsCiAgICAgIHB0OiAnNDJweCcsCiAgICAgIHBsOiAnNDJweCcsCiAgICAgIGJnOiBxdWVyeS5iZywKICAgICAgY29sb3I6IHF1ZXJ5LmNvbG9yLAogICAgfX0KICA-CiAgICA8RmxleAogICAgICBzeD17ewogICAgICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLAogICAgICB9fQogICAgPgogICAgICA8VGV4dAogICAgICAgIGFzPSdzcGFuJwogICAgICAgIHN4PXt7CiAgICAgICAgICBtbDogMiwKICAgICAgICAgIGxldHRlclNwYWNpbmc6ICctLjAzbScsCiAgICAgICAgICBmb250RmFtaWx5OiAnc2Fucy1zZXJpZicsCiAgICAgICAgICBmb250U2l6ZTogNCwKICAgICAgICAgIGZvbnRXZWlnaHQ6IDcwMCwKICAgICAgICB9fQogICAgICA-CiAgICAgICAge3F1ZXJ5LmRvbWFpbn0KICAgICAgPC9UZXh0PgogICAgPC9GbGV4PgogIDwvQm94PgogIDxGbGV4CiAgICBzeD17ewogICAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJywKICAgICAganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInLAogICAgICBmbGV4RGlyZWN0aW9uOiAnY29sdW1uJywKICAgICAgYmc6IHF1ZXJ5LmJnLAogICAgfX0KICA-CiAgICA8VGV4dAogICAgICBzeD17ewogICAgICAgIHB4OiAnNDZweCcsCiAgICAgICAgcHk6IDMsCiAgICAgICAgbGV0dGVyU3BhY2luZzogJy0uMDNtJywKICAgICAgICBmb250RmFtaWx5OiAnc2Fucy1zZXJpZicsCiAgICAgICAgZm9udFNpemU6ICc0NXB4JywKICAgICAgICBmb250V2VpZ2h0OiA3MDAsCiAgICAgICAgYmc6IHF1ZXJ5LmNvbG9yLAogICAgICAgIGNvbG9yOiBxdWVyeS5iZywKICAgICAgICBtYXhXaWR0aDogJzM4cmVtJywKICAgICAgICB0ZXh0QWxpZ246ICdjZW50ZXInLAogICAgICB9fQogICAgPgogICAgICB7cXVlcnkudGl0bGV9CiAgICA8L1RleHQ-CiAgPC9GbGV4Pgo8Lz4%26title%3DHow%2Bto%2Bformat%2Bnumbers%2Bin%2BJavaScript%253F%250A%26domain%3Dmarkozxuu.com%23",
+        "slug": "format-numbers-js",
+        "date": "2021-04-19",
+        "published": true,
+        "author": "Markoz Peña"
     }
 ]
