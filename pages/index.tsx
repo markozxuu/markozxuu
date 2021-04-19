@@ -26,14 +26,14 @@ const Index = () => (
           >
             hyper.is
           </a>{' '}
-          a product of{' '}
+          a product by{' '}
           <a
             href="https://vercel.com"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
-            vercel.com
+            Vercel
           </a>{' '}
         </li>
         <li className="mt-5">
@@ -46,8 +46,8 @@ const Index = () => (
           >
             e-commerce
           </a>{' '}
-          for a company with a headless approach, this with the help of Shopify
-          for data consumption and Next.js to create that incredible SSG
+          store for a company with a headless approach, with the help of Shopify
+          for data consumption and Next.js to create an incredible SSG
           application, when it is necessary to use{' '}
           <em className="font-medium not-italic">
             Incremental Static Regeneration
@@ -83,7 +83,7 @@ const Index = () => (
           </a>
         </li>
         <li className="mt-5">
-          Add
+          Added the
           <a
             href="https://github.com/vercel/vercel/pull/4947"
             target="_blank"
@@ -92,17 +92,14 @@ const Index = () => (
           >
             res.redirect
           </a>
-          helper method to API Routes Next.js
-        </li>
-        <li className="mt-5">
-          Added Friendly error for
+          helper method to the Next.js API and{' '}
           <a
             href="https://github.com/vercel/next.js/pull/15844"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-vercel dark:hover:text-gray-vercel mx-1"
           >
-            res.redirect
+            improved the error messages
           </a>
         </li>
       </ul>
@@ -118,7 +115,7 @@ const Index = () => (
           >
             <em>Photo Mark</em>
           </a>{' '}
-          an application of photography
+          an application for photography
         </li>
         <li className="mt-5">
           <a
@@ -138,7 +135,7 @@ const Index = () => (
             target="_blank"
             className="underline hover:text-gray-vercel dark:hover:text-gray-vercel"
           >
-            <em>Material cronometro</em>
+            <em>Chronometer material</em>
           </a>{' '}
           an application
         </li>
