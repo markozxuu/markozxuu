@@ -21,6 +21,15 @@ const Head = ({
   const { systemTheme } = useTheme();
   return (
     <NextHead>
+      {/* Font */}
+      <link
+        rel="preload"
+        href="/fonts/inter-var-latin.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+
       {/* Title */}
       <title>{title}</title>
       <meta name="og:title" content={title} />
