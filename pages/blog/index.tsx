@@ -41,7 +41,7 @@ const Blog = ({ sortPosts, preview }: Props) => {
         <div className="max-w-xl p-4 mx-auto">
           <div className="flex flex-col items-start">
             <span className="mb-5 font-medium">Preview mode enable</span>
-            <Link href="/api/clear-preview">
+            <Link href="/api/clear-preview" passHref>
               <button className="rounded-md dark:bg-yellow-600 bg-yellow-500 text-white transition-colors duration-200 p-2 w-28 capitalize font-semibold">
                 Exit preview
               </button>
