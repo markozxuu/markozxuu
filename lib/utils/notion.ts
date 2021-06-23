@@ -1,6 +1,8 @@
+import { NOTION_TABLE } from '@lib/utils/const';
+
 export async function getSlugNotion() {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
+    `https://notion-api.splitbee.io/v1/table/${NOTION_TABLE}`,
     {
       headers: {
         pragma: 'no-cache',
@@ -19,7 +21,7 @@ export async function getSlugNotion() {
 
 export async function getPostList() {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
+    `https://notion-api.splitbee.io/v1/table/${NOTION_TABLE}`,
     {
       headers: {
         pragma: 'no-cache',
@@ -32,7 +34,7 @@ export async function getPostList() {
 
 export async function getBlogIndex(id: any) {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_TABLE}`,
+    `https://notion-api.splitbee.io/v1/table/${NOTION_TABLE}`,
     {
       headers: {
         pragma: 'no-cache',
