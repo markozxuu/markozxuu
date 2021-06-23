@@ -70,7 +70,7 @@ const Post = ({
         {preview && (
           <div className="flex flex-col">
             <span className="mb-5 font-medium">Preview mode enable</span>
-            <Link href="/api/clear-preview">
+            <Link href="/api/clear-preview" passHref>
               <button className="rounded-md dark:bg-yellow-600 bg-yellow-500 text-white transition-colors duration-200 p-2 w-28 capitalize font-semibold mb-5">
                 Exit preview
               </button>
