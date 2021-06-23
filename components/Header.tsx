@@ -1,17 +1,14 @@
-// Packages
 import Link from 'next/link';
 
-// Icons
 import Logo from '@components/icons/Logo';
 
-// Components
 import Select from '@components/Select';
 
 const Header = () => {
   return (
     <header>
       <Link href="/">
-        <a href="/">
+        <a>
           <Logo />
         </a>
       </Link>

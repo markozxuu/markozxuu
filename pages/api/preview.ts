@@ -3,6 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 // Utils
 import { getPostList } from '@lib/utils/notion';
+import { TOKEN } from '@lib/utils/const';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (typeof req.query.token !== 'string') {
@@ -13,7 +14,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       },
     });
   }
-  if (req.query.token !== process.env.TOKEN) {
+
+  if (req.query.token !== TOKEN) {
     return res.status(401).json({
       error: {
         code: 'no_authorized',
@@ -23,6 +25,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const postTable = await getPostList();
+
   if (!postTable) {
     return res.status(404).json({
       error: {
@@ -31,6 +34,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       },
     });
   }
+
   res.setPreviewData({});
   res.redirect('/blog');
 }

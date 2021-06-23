@@ -1,7 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-  },
   async rewrites() {
     return [
       {
@@ -9,5 +6,8 @@ module.exports = {
         destination: '/api/sitemap',
       },
     ];
+  },
+  images: {
+    domains: ['s3-us-west-2.amazonaws.com'],
   },
 };
