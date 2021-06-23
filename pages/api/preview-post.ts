@@ -1,8 +1,7 @@
-// Packages
 import { NextApiRequest, NextApiResponse } from 'next';
 
-// Utils
 import { getBlogIndex } from '@lib/utils/notion';
+import { TOKEN } from '@lib/utils/const';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (typeof req.query.slug !== 'string') {
@@ -14,7 +13,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   }
 
-  if (req.query.token !== process.env.TOKEN) {
+  if (req.query.token !== TOKEN) {
     return res.status(401).json({
       error: {
         code: 'no_authorized',
