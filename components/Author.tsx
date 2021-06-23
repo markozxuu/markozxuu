@@ -1,9 +1,14 @@
+import Image from 'next/image';
+
 // Components
 import Date from '@components/Date';
 import ViewCounter from '@components/ViewConter';
 
 // Icons
 import Divider from '@components/icons/Divider';
+
+import { shimmer } from '@lib/utils/shimmer';
+import { toBase64 } from '@lib/utils/toBase64';
 
 type AuthorData = {
   firstName: string;
@@ -35,11 +40,18 @@ const Author = ({ date, authorData, slugPage, title }: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="rounded-full w-7 h-7 inline-flex mr-2"
+            <Image
+              className="rounded-full"
               src={profilePhoto}
+              alt={`Photo ${firstName}`}
+              width={30}
+              height={30}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(30, 30)
+              )}`}
             />
-            <span className="font-semibold">{firstName}</span>
+            <span className="font-semibold ml-2">{firstName}</span>
           </a>
           <span className="dark:text-accent-3 text-accent-5 flex items-center mx-1">
             <Divider />
