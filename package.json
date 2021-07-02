@@ -15,6 +15,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^10.2.6",
+    "clsx": "^1.1.1",
     "fathom-client": "^3.0.0",
     "firebase-admin": "^9.9.0",
     "lodash.debounce": "^4.0.8",
@@ -27,7 +28,8 @@
     "react-notion": "^0.9.3",
     "rss": "^1.2.2",
     "swr": "^0.5.6",
-    "tailwindcss": "^2.2.2"
+    "tailwindcss": "^2.2.2",
+    "use-sound": "^4.0.0"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.6",
