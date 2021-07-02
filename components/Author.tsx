@@ -1,10 +1,8 @@
 import Image from 'next/image';
 
-// Components
 import Date from '@components/Date';
 import ViewCounter from '@components/ViewConter';
 
-// Icons
 import Divider from '@components/icons/Divider';
 
 import { shimmer } from '@lib/utils/shimmer';
@@ -29,7 +27,7 @@ const Author = ({ date, authorData, slugPage, title }: Props) => {
   const { firstName, profilePhoto } = authorData;
   return (
     <>
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+      <h1 className="font-bold text-3xl md:text-4xl mb-4 tracking-tight text-black dark:text-white">
         {title}
       </h1>
       <div className="flex items-center mb-3 justify-between">
