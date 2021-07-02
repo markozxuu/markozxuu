@@ -1,10 +1,8 @@
-// Packages
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { NotionRenderer, BlockMapType } from 'react-notion';
 
-// Utils
 import {
   getSlugNotion,
   getContentNotion,
@@ -13,7 +11,6 @@ import {
 
 import { gettingMetadata } from '@lib/utils/getting-metadata';
 
-// Components
 import Layout from '@components/Layout';
 import Author from '@components/Author';
 import Head from '@components/Head';
@@ -66,7 +63,7 @@ const Post = ({
       <Head image={metadata?.og} description={metadata?.description}>
         <title>{title}</title>
       </Head>
-      <div className="max-w-2xl px-4 mx-auto mt-7">
+      <div className="max-w-3xl px-4 mx-auto mt-7">
         {preview && (
           <div className="flex flex-col">
             <span className="mb-5 font-medium">Preview mode enable</span>
