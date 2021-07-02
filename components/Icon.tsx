@@ -2,10 +2,16 @@ interface IconProps {
   size?: number;
   weight?: number;
   className?: string;
+  fill?: string;
 }
 
 const withIcon = (icon: string) => {
-  const Icon = ({ size = 16, weight = 1.5, className }: IconProps) => {
+  const Icon = ({
+    size = 16,
+    weight = 1.5,
+    className,
+    fill = 'none',
+  }: IconProps) => {
     return (
       <svg
         className={className}
@@ -16,7 +22,7 @@ const withIcon = (icon: string) => {
         strokeWidth={weight}
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill="none"
+        fill={fill}
         shapeRendering="geometricPrecision"
         dangerouslySetInnerHTML={{ __html: icon }}
       />
