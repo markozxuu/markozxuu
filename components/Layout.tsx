@@ -1,4 +1,3 @@
-// Components
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -8,15 +7,11 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
-      <div className="min-h-screen container mx-auto">
-        <Header />
-        <div>{children}</div>
-      </div>
-      <div className="my-10">
-        <Footer />
-      </div>
-    </>
+    <div>
+      <Header />
+      <div className="max-w-4xl mx-auto mt-16 antialiased">{children}</div>
+      <Footer />
+    </div>
   );
 };
 
