@@ -1,12 +1,19 @@
+interface IconProps {
+  size?: number;
+  weight?: number;
+  className?: string;
+}
+
 const withIcon = (icon: string) => {
-  const Icon = () => {
+  const Icon = ({ size = 16, weight = 1.5, className }: IconProps) => {
     return (
       <svg
+        className={className}
         viewBox="0 0 24 24"
-        width={16}
-        height={16}
+        width={size}
+        height={size}
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth={weight}
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
