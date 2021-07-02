@@ -3,7 +3,7 @@ import Layout from '@components/Layout';
 
 const Index = () => (
   <Layout>
-    <main className="max-w-xl p-4 mx-auto">
+    <main className="p-4 mx-auto">
       <h1 className="text-4xl font-semibold mb-8">Markoz Peña</h1>
       <p className="text-lg leading-loose">
         Started programming in late 2015 on his own. Markoz has no college
