@@ -1,12 +1,9 @@
-// Packages
 import { GetStaticProps } from 'next/types';
 import Link from 'next/link';
 
-// Components
 import Layout from '@components/Layout';
 import DisplayDate from '@components/Date';
 
-// Utils
 import { getPostList } from '@lib/utils/notion';
 
 type NotionData = {
@@ -49,8 +46,8 @@ const Blog = ({ sortPosts, preview }: Props) => {
           </div>
         </div>
       )}
-      <div className="max-w-xl px-4 pt-10 pb-32 mx-auto">
-        <h2 className="text-3xl font-semibold mb-12">Posts</h2>
+      <div className="max-w-3xl px-4 lg:px-0 pb-32 mx-auto">
+        <h2 className="text-4xl font-extrabold mb-12">Posts</h2>
         <div className="border-b border-accent-3 dark:border-accent-2">
           {sortPosts.map((post) => (
             <div
