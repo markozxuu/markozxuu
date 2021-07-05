@@ -2,7 +2,7 @@
 import { NextPageContext } from 'next';
 
 // Components
-import Error from '@components/error';
+import Error from '@components/Error';
 
 interface Props {
   statusCode: number;
