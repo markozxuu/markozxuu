@@ -1,4 +1,4 @@
-type AuthorProfile = {
+export type AuthorProfile = {
   firstName: string;
   fullName: string;
   id: string;
@@ -6,7 +6,7 @@ type AuthorProfile = {
   profilePhoto: string;
 };
 
-type Author = {
+export type Author = {
   date: string;
   authorData: AuthorProfile;
 };
