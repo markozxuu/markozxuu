@@ -4,16 +4,9 @@ import Link from 'next/link';
 import Layout from '@components/Layout';
 import DisplayDate from '@components/Date';
 
-import { getPostList } from '@lib/utils/notion';
+import { getPostList, onlyShowPublishedPosts } from '@lib/utils/notion';
 
-type NotionData = {
-  id: string;
-  Published: boolean | undefined;
-  Slug: string[];
-  Date: string;
-  Page: string;
-  Authors: any;
-};
+import { NotionData } from '@typings/notion';
 
 interface Props {
   sortPosts: NotionData[];
@@ -79,7 +72,7 @@ const Blog = ({ sortPosts, preview }: Props) => {
 
 export const getStaticProps: GetStaticProps = async ({ preview }) => {
   const data: NotionData[] = await getPostList();
-  const posts = preview ? data : data.filter((post) => Boolean(post.Published));
+  const posts = onlyShowPublishedPosts(preview, data);
   const sortPosts = posts.sort(
     (a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()
   );
