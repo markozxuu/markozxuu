@@ -1,7 +1,5 @@
-// Packages
 import { NextPageContext } from 'next';
 
-// Components
 import Error from '@components/Error';
 
 interface Props {
