@@ -11,7 +11,7 @@ const About = () => (
         <h1 className="lg:text-4xl text-2xl text-gray-900 dark:text-white font-bold">
           Hi there, I&apos;m Markoz <span className={s.wave}>👋🏼</span>
         </h1>
-        <div className="mt-4 text-gray-800 dark:text-white">
+        <div className="mt-4 text-[#212121] dark:text-[#eaeaea]">
           <p>
             I started programming in late 2015. I&apos;m a strong believer in
             the idea that you can learn a lot about programming through blog
@@ -22,7 +22,7 @@ const About = () => (
             collaborator very active in the OSS projects{' '}
             <a
               href="https://vercel.com/"
-              className="font-bold"
+              className="font-bold dark:text-white text-black"
               target="_blank"
               rel="noopener noreferrer"
             >
