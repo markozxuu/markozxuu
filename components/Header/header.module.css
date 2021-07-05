@@ -10,7 +10,7 @@
    transition: transform 0.2s ease;
 }
 
-@keyframes shake {
+@keyframes shaking-animation {
   0% { transform: rotate(0deg) }
   25% { transform: rotate(15deg) }
   50% { transform: rotate(-13deg) }
@@ -19,7 +19,7 @@
 }
 
 .icon.open {
-  animation: shake 350ms 0s 1 running none ease;
+  animation: shaking-animation 350ms 0s 1 running none ease;
 }
 
 .sounds {
