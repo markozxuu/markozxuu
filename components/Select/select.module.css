@@ -1,0 +1,7 @@
+.root {
+  @apply flex items-center border transition-colors duration-200 rounded-md mr-2 pl-4; 
+}
+
+.select {
+  @apply bg-transparent text-sm border-none focus:ring-0 focus:border-black pl-4 pr-7;  
+}
