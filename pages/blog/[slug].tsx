@@ -11,26 +11,15 @@ import {
 
 import { gettingMetadata } from '@lib/utils/getting-metadata';
 
+import { Author as AuthorData } from '@typings/notion';
+
 import Layout from '@components/Layout';
 import Author from '@components/Author';
 import Head from '@components/Head';
 
-type AuthorData = {
-  firstName: string;
-  fullName: string;
-  id: string;
-  lastLame: string;
-  profilePhoto: string;
-};
-
-type Author = {
-  date: string;
-  authorData: AuthorData;
-};
-
 interface Props {
   notionData: BlockMapType;
-  author: Author;
+  author: AuthorData;
   title: string;
   preview: boolean;
   published: boolean;
@@ -47,6 +36,7 @@ const Post = ({
 }: Props) => {
   const { isFallback } = useRouter();
   const metadata = gettingMetadata(title);
+
   if (isFallback) {
     return (
       <Layout>
@@ -58,6 +48,7 @@ const Post = ({
       </Layout>
     );
   }
+
   return (
     <Layout>
       <Head image={metadata?.og} description={metadata?.description}>
