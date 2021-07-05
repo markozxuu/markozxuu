@@ -26,7 +26,8 @@
       "@styles/*": ["styles/*"],
       "@lib/*": ["lib/*"],
       "@data/*": ["data/*"],
-      "@public/*": ["public/*"]
+      "@public/*": ["public/*"],
+      "@typings/*": ["typings/*"]
     }
   },
   "exclude": [
