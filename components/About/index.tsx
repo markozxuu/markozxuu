@@ -9,7 +9,7 @@ const About = () => (
     <div className={s.container}>
       <div className="lg:px-4">
         <h1 className="lg:text-4xl text-2xl text-gray-900 dark:text-white font-bold">
-          Hi there, I&apos;m Markoz <span className={s.wave}>👋</span>
+          Hi there, I&apos;m Markoz <span className={s.wave}>👋🏼</span>
         </h1>
         <div className="mt-4 text-gray-800 dark:text-white">
           <p>
