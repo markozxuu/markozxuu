@@ -1,5 +1,4 @@
-// Components
-import Error from '@components/error';
+import Error from '@components/Error';
 
 const NotFound = () => <Error status={404} />;
 
