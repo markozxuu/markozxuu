@@ -28,13 +28,6 @@ const Footer = () => {
               Linkedin
             </a>
             <a
-              href="https://www.instagram.com/markozxuu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-            <a
               href="https://www.markozxuu.com/atom.xml"
               target="_blank"
               rel="noopener noreferrer"
