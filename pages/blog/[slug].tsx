@@ -40,7 +40,7 @@ const Post = ({
   if (isFallback) {
     return (
       <Layout>
-        <div className="max-w-2xl px-4 mx-auto mt-7">
+        <div className="max-w-3xl px-4 mx-auto mt-7">
           <h1 className="font-bold text-4xl tracking-tight text-black dark:text-white">
             Loading...
           </h1>
