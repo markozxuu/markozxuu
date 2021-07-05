@@ -61,7 +61,7 @@ export async function getContentNotion(id: any) {
   return data;
 }
 
-export function onlyShowPublishedPosts(preview: boolean, posts: NotionData[]) {
+export function onlyShowPublishedPosts(preview = false, posts: NotionData[]) {
   const postsPublished = preview
     ? posts
     : posts.filter((post) => Boolean(post.Published));
