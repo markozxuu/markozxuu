@@ -8,17 +8,11 @@ import Divider from '@components/icons/Divider';
 import { shimmer } from '@lib/utils/shimmer';
 import { toBase64 } from '@lib/utils/toBase64';
 
-type AuthorData = {
-  firstName: string;
-  fullName: string;
-  id: string;
-  lastLame: string;
-  profilePhoto: string;
-};
+import { AuthorProfile } from '@typings/notion';
 
 interface Props {
   date: string;
-  authorData: AuthorData;
+  authorData: AuthorProfile;
   slugPage: string;
   title: string;
 }
