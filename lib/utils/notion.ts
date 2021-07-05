@@ -1,5 +1,7 @@
 import { NOTION_TABLE } from '@lib/utils/const';
 
+import { NotionData } from '@typings/notion';
+
 export async function getSlugNotion() {
   const res = await fetch(
     `https://notion-api.splitbee.io/v1/table/${NOTION_TABLE}`,
@@ -57,4 +59,11 @@ export async function getContentNotion(id: any) {
   });
   const data = await res.json();
   return data;
+}
+
+export function onlyShowPublishedPosts(preview: boolean, posts: NotionData[]) {
+  const postsPublished = preview
+    ? posts
+    : posts.filter((post) => Boolean(post.Published));
+  return postsPublished;
 }
