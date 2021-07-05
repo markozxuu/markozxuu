@@ -1,11 +1,8 @@
-// Packages
 import { useEffect } from 'react';
 import swr from 'swr';
 
-// Lib
 import fetcher from '@lib/fetcher';
 
-// Utils
 import formatNumber from '@lib/utils/number-format';
 
 interface Props {
