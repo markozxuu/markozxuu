@@ -1,7 +1,9 @@
+import s from './footer.module.css';
+
 const Footer = () => {
   return (
-    <footer className="mt-24 pb-36">
-      <div className="max-w-4xl px-4 mx-auto">
+    <footer className={s.root}>
+      <div className={s.container}>
         <div className="pb-8 mb-2 border-t-2 border-accent-3 dark:border-accent-2" />
         <div className="flex flex-col justify-between lg:flex-row">
           <p>Thanks for reading! :)</p>
@@ -26,13 +28,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               Linkedin
-            </a>
-            <a
-              href="https://www.instagram.com/markozxuu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
             </a>
             <a
               href="https://www.markozxuu.com/atom.xml"

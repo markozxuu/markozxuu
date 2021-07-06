@@ -1,0 +1,7 @@
+.title {
+   @apply text-lg font-bold; 
+}
+
+.description {
+  @apply line-clamp-2;
+}

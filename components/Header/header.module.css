@@ -1,5 +1,5 @@
 .root {
-  @apply sticky top-0 z-10 px-4 py-2 mx-auto lg:py-6 lg:mb-6;
+  @apply sticky top-0 z-10 px-4 py-2 mx-auto lg:py-[0.7rem] lg:mb-6;
 }
 
 .container {
@@ -10,16 +10,20 @@
    transition: transform 0.2s ease;
 }
 
-@keyframes shake {
-    0% { transform: rotate(0deg) }
-    25% { transform: rotate(15deg) }
-    50% { transform: rotate(-13deg) }
-    75% { transform: rotate(12deg) }
-    100% { transform: rotate(0deg) }
+.scrollNavbar {
+  transition: box-shadow .2s ease;
+}
+
+@keyframes shaking-animation {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(15deg) }
+  50% { transform: rotate(-13deg) }
+  75% { transform: rotate(12deg) }
+  100% { transform: rotate(0deg) }
 }
 
 .icon.open {
-  animation: shake 350ms 0s 1 running none ease;
+  animation: shaking-animation 350ms 0s 1 running none ease;
 }
 
 .sounds {

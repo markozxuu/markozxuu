@@ -1,4 +1,3 @@
-// Utils
 import dateFormat from '@lib/utils/date-format';
 
 interface Props {

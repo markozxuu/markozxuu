@@ -1,14 +1,11 @@
-// Packages
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import Router from 'next/router';
 import nprogress from 'nprogress';
 import debounce from 'lodash.debounce';
 
-// Components
 import Head from '@components/Head';
 
-// Styles
 import '@styles/global.css';
 import 'react-notion/src/styles.css';
 import '@styles/notion.css';
@@ -40,7 +37,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       disableTransitionOnChange
       forcedTheme={(Component as any).theme || undefined}
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="system"
     >
       <Head />
       <Component {...pageProps} />
