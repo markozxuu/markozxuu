@@ -1,11 +1,8 @@
-// Components
 import Head from '@components/Head';
 import Layout from '@components/Layout';
 
-// Icon
 import Vercel from '@components/icons/Vercel';
 
-// Styles
 import s from './error.module.css';
 
 interface Props {
@@ -19,7 +16,7 @@ const Error = ({ status }: Props) => (
       <meta name="robots" content="noindex" />
     </Head>
     {status === 404 ? (
-      <div className="max-w-xl p-4 mt-20 mx-auto">
+      <div className="max-w-3xl p-4 mt-20 mx-auto">
         <h1 className="text-4xl font-bold mb-7">This page cannot be found.</h1>
         <p>
           <blockquote
