@@ -1,9 +1,8 @@
 const Logo = () => (
-  <span>
+  <span className="font-extrabold">
     markozxuu.com
     <style jsx>{`
       span {
-        font-weight: bold;
         font-size: 18px;
         display: inline-flex;
         align-items: center;
