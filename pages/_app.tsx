@@ -37,7 +37,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       disableTransitionOnChange
       forcedTheme={(Component as any).theme || undefined}
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="system"
     >
       <Head />
       <Component {...pageProps} />
