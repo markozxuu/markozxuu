@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "ncc build lib/utils/atom.ts && node scripts/build-atom.js && next build",
     "start": "next start",
     "prepare": "husky install",
     "pre-commit": "lint-staged --allow-empty",
