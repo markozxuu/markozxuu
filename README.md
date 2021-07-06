@@ -20,6 +20,6 @@ Here are some ideas to get you started:
 - 💬 Ask me about web performance and optimization
 - ⚡ Fun fact: I love anime
 
- **Let's connect**: [Twitter](https://twitter.com/markozxuu) • [Linkedin](https://www.linkedin.com/in/markozpena/) • [Portfolio](https://markozxuu.com) • [Blog](https://markozxuu.com/blog)
+ **Let's connect**: [Twitter](https://twitter.com/markozxuu) • [Linkedin](https://www.linkedin.com/in/markozpena/) • [Website](https://markozxuu.com) • [Blog](https://markozxuu.com/blog)
 
 
