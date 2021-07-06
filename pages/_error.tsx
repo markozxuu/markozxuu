@@ -1,5 +1,4 @@
 import { NextPageContext } from 'next';
-
 import Error from '@components/Error';
 
 interface Props {
