@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-- 🔭 I’m currently working at Diametra
+- 🔭 I’m currently working at workoutos as Software Enginner
 - 👨‍💻 I'm currently collaborating with ▲Vercel on vercel cli and Next.js
 - 💬 Ask me about web performance and optimization
 - ⚡ Fun fact: I love anime
