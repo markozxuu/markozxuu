@@ -17,7 +17,6 @@
     "@tailwindcss/line-clamp": "^0.2.1",
     "autoprefixer": "^10.3.1",
     "clsx": "^1.1.1",
-    "fathom-client": "^3.1.0",
     "firebase-admin": "^9.11.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
