@@ -13,6 +13,7 @@
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
+    "@react-spring/web": "^9.2.4",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "autoprefixer": "^10.3.1",
