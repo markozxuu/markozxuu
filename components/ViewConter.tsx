@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import swr from 'swr';
+import useSWR from 'swr';
 
 import fetcher from '@lib/fetcher';
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const ViewCounter = ({ slug }: Props) => {
-  const { data } = swr(`/api/views/${slug}`, fetcher);
+  const { data } = useSWR(`/api/views/${slug}`, fetcher);
   const views = data?.total;
   useEffect(() => {
     const registerView = () => {
