@@ -1,0 +1,7 @@
+.root {
+  @apply flex items-center; 
+}
+
+.likeCount {
+  @apply decoration-clone bg-clip-text text-transparent bg-gradient-to-b from-[#bc4e9c] to-[#f80759];  
+}
