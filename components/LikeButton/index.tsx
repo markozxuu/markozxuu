@@ -1,5 +1,6 @@
 import cx from 'clsx';
 
+import { useSettings } from '@lib/useSettings';
 import { usePostLike } from '@lib/usePostLikes';
 
 import LoadingDots from '../LoadingDots';
@@ -13,6 +14,7 @@ interface LikeButtonProps {
 }
 
 const LikeButton = ({ slug }: LikeButtonProps) => {
+  const { isSound } = useSettings();
   const { likesUser, totalLikesPost, increment, isLoading } = usePostLike(slug);
 
   if (isLoading) {
@@ -28,6 +30,7 @@ const LikeButton = ({ slug }: LikeButtonProps) => {
 
   return (
     <div className={s.root}>
+      <h1>{isSound ? 'true' : 'false'}</h1>
       <button aria-label="Like button" onClick={increment}>
         <Heart likesUser={String(likesUser)} />
       </button>
