@@ -12,7 +12,10 @@ import '@styles/notion.css';
 import '@styles/syntax.css';
 
 //Hooks
-import { useAnalytics } from '@lib/use-analytics';
+import { useAnalytics } from '@lib/useAnalytics';
+
+// Context
+import { SettingsProvider } from '@lib/SettingsContext';
 
 // Only show nprogress after 500ms (slow loading)
 const start = debounce(nprogress.start, 500);
@@ -33,15 +36,17 @@ Router.events.on('routeChangeError', () => {
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useAnalytics();
   return (
-    <ThemeProvider
-      disableTransitionOnChange
-      forcedTheme={(Component as any).theme || undefined}
-      attribute="class"
-      defaultTheme="system"
-    >
-      <Head />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <SettingsProvider>
+      <ThemeProvider
+        disableTransitionOnChange
+        forcedTheme={(Component as any).theme || undefined}
+        attribute="class"
+        defaultTheme="system"
+      >
+        <Head />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </SettingsProvider>
   );
 };
 
