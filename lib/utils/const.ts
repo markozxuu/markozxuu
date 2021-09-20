@@ -9,3 +9,4 @@ export const PLANETSCALE_DB = process.env.PLANETSCALE_DB;
 export const PLANETSCALE_ORG = process.env.PLANETSCALE_ORG;
 export const PLANETSCALE_TOKEN = process.env.PLANETSCALE_TOKEN;
 export const PLANETSCALE_TOKEN_NAME = process.env.PLANETSCALE_TOKEN_NAME;
+export const LIMIT_LIKES = 10;
