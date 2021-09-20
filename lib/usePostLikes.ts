@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 
+import { LIMIT_LIKES } from './utils/const';
 import fetcher from './fetcher';
 
 async function updatePostLikes(slug: string, totalLikesFromUser: number) {
@@ -15,12 +16,10 @@ async function updatePostLikes(slug: string, totalLikesFromUser: number) {
 const usePostLike = (slug: string) => {
   const { data, error, mutate } = useSWR(`/api/likes/${slug}`, fetcher);
 
-  const limitLikes = 10;
-
   const increment = async () => {
     const incrementLike = data?.currentLikes + 1;
 
-    if (!data || data.currentLikes >= limitLikes) return true;
+    if (!data || data.currentLikes >= LIMIT_LIKES) return true;
 
     // Applying local mutation to data with the intention of give him
     // the feel to the user that changes feel faster without the need
