@@ -4,20 +4,9 @@ import { PSDB } from 'planetscale-node';
 // Native
 import { createHash } from 'crypto';
 
-import {
-  IP_ADDRESS_SALT,
-  PLANETSCALE_DB,
-  PLANETSCALE_ORG,
-  PLANETSCALE_TOKEN,
-  PLANETSCALE_TOKEN_NAME,
-} from '@lib/utils/const';
+import { IP_ADDRESS_SALT } from '@lib/utils/const';
 
 const conn = new PSDB('main');
-
-PLANETSCALE_DB;
-PLANETSCALE_ORG;
-PLANETSCALE_TOKEN;
-PLANETSCALE_TOKEN_NAME;
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const {
@@ -44,7 +33,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       if (likes === 1) {
         await conn.query(
           `
-           insert into succesPosts(userId, slug, numberLikes) values('${userId}', '${postId}', '${likes}')
+           insert into posts(userId, slug, numberLikes) values('${userId}', '${postId}', '${likes}')
           `,
           null
         );
@@ -52,7 +41,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (likes > 1) {
         await conn.query(
-          `update succesPosts set numberLikes=numberLikes + 1 where slug='${postId}' and (userId='${userId}');`,
+          `update posts set numberLikes=numberLikes + 1 where slug='${postId}' and (userId='${userId}');`,
           null
         );
         return res.status(201).json({ slug, userId, likes });
@@ -60,11 +49,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       break;
     case 'GET':
       const [amountLikePost] = await conn.query(
-        `select numberLikes from succesPosts where userId='${userId}' and slug='${postId}';`,
+        `select numberLikes from posts where userId='${userId}' and slug='${postId}';`,
         null
       );
       const [totalLikes] = await conn.query(
-        `select sum(numberLikes) from succesPosts where slug='${slug}'`,
+        `select sum(numberLikes) from posts where slug='${slug}'`,
         null
       );
       const totalLikesFromPost =
