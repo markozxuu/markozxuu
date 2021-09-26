@@ -18,8 +18,17 @@ const About = () => (
             readings and online courses.
           </p>
           <p className="mt-2">
-            Currently working at DiamtraLabs as Frontend Developer, and I&apos;m
-            collaborator very active in the OSS projects{' '}
+            Currently working at{' '}
+            <a
+              className="underline"
+              href="https://getwos.co/explora"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              workoutos
+            </a>{' '}
+            as Software Enginner, and I&apos;m collaborator very active in the
+            OSS projects{' '}
             <a
               href="https://vercel.com/"
               className="font-bold dark:text-white text-black"

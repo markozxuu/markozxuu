@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent } from 'react';
 import { useTheme } from 'next-themes';
 import useSound from 'use-sound';
 import cx from 'clsx';
+
+import { useSettings } from '@lib/useSettings';
 
 import Moon from '@components/icons/Moon';
 import Soun from '@components/icons/Sun';
@@ -9,16 +11,13 @@ import System from '@components/icons/System';
 
 import s from './select.module.css';
 
-interface SelectProps {
-  isSound: boolean;
-}
-
-const Select = ({ isSound }: SelectProps) => {
+const Select = () => {
   const { theme, setTheme } = useTheme();
+  const { isSound } = useSettings();
   const [play, { stop }] = useSound('/sounds/bleep.mp3', { volume: 0.25 });
-  const [mounted, setMounted] = useState<boolean>(false);
+  const [isMounted, setMounted] = useState<boolean>(false);
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const { value: valueSelect } = event.target;
     setTheme(valueSelect);
     if (!isSound) {
@@ -28,7 +27,8 @@ const Select = ({ isSound }: SelectProps) => {
   };
 
   useEffect(() => setMounted(true), []);
-  if (!mounted) {
+
+  if (!isMounted) {
     return null;
   }
 

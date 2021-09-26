@@ -16,6 +16,7 @@ import { Author as AuthorData } from '@typings/notion';
 import Layout from '@components/Layout';
 import Author from '@components/Author';
 import Head from '@components/Head';
+import LikeButton from '@components/LikeButton';
 
 interface Props {
   notionData: BlockMapType;
@@ -72,6 +73,9 @@ const Post = ({
           </span>
         )}
         <NotionRenderer blockMap={notionData} />
+        <div className="flex justify-center items-center mt-16">
+          <LikeButton slug={slug} />
+        </div>
       </div>
     </Layout>
   );
