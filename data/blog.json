@@ -16,5 +16,14 @@
         "date": "2021-04-19",
         "published": true,
         "author": "Markoz Peña"
+    },
+    {
+        "title": "The best of Next.js Conf",
+        "description": "Well certainly everything that was shown seems good to me, nevertheless I'm going to highlight that most interesting that are...",
+        "og": "https://api.microlink.io/?adblock=false&waitForTimeout=1500&meta=false&screenshot&element=%23screenshot&embed=screenshot.url&url=https%3A%2F%2Fcards.microlink.io%2F%3Ftitle%3DThe%2Bbest%2Bof%2BNext.js%2BConf%26domain%3Dmarkozxuu.com%26p%3D2gPCPD4KICA8Qm94CiAgICBhcz0naGVhZGVyJwogICAgc3g9e3sKICAgICAgcG9zaXRpb246ICdhYnNvbHV0ZScsCiAgICAgIHB0OiAnNDJweCcsCiAgICAgIHBsOiAnNDJweCcsCiAgICAgIGJnOiBxdWVyeS5iZywKICAgICAgY29sb3I6IHF1ZXJ5LmNvbG9yLAogICAgfX0KICA-CiAgICA8RmxleAogICAgICBzeD17ewogICAgICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLAogICAgICB9fQogICAgPgogICAgCiAgICAgIDxUZXh0CiAgICAgICAgYXM9J3NwYW4nCiAgICAgICAgc3g9e3sKICAgICAgICAgIG1sOiAyLAogICAgICAgICAgbGV0dGVyU3BhY2luZzogJy0uMDNtJywKICAgICAgICAgIGZvbnRGYW1pbHk6ICdzYW5zLXNlcmlmJywKICAgICAgICAgIGZvbnRTaXplOiA0LAogICAgICAgICAgZm9udFdlaWdodDogNzAwLAogICAgICAgIH19CiAgICAgID4KICAgICAgICB7cXVlcnkuZG9tYWlufQogICAgICA8L1RleHQ-CiAgICA8L0ZsZXg-CiAgPC9Cb3g-CiAgPEZsZXgKICAgIHN4PXt7CiAgICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLAogICAgICBqdXN0aWZ5Q29udGVudDogJ2NlbnRlcicsCiAgICAgIGZsZXhEaXJlY3Rpb246ICdjb2x1bW4nLAogICAgICBiZzogcXVlcnkuYmcsCiAgICB9fQogID4KICAgIDxUZXh0CiAgICAgIHN4PXt7CiAgICAgICAgcHg6ICc0MHB4JywKICAgICAgICBweTogMywKICAgICAgICBsZXR0ZXJTcGFjaW5nOiAnLS4wM20nLAogICAgICAgIGZvbnRGYW1pbHk6ICdzYW5zLXNlcmlmJywKICAgICAgICBmb250U2l6ZTogNiwKICAgICAgICBmb250V2VpZ2h0OiA3MDAsCiAgICAgICAgYmc6IHF1ZXJ5LmNvbG9yLAogICAgICAgIGNvbG9yOiBxdWVyeS5iZywKICAgICAgICBtYXhXaWR0aDogJzM4cmVtJywKICAgICAgICB0ZXh0QWxpZ246ICdjZW50ZXInLAogICAgICB9fQogICAgPgogICAgICB7cXVlcnkudGl0bGV9CiAgICA8L1RleHQ-CiAgPC9GbGV4Pgo8Lz4%26preset%3Drauchg",
+        "slug": "the-best-nextjs-conf",
+        "date": "2021-10-28",
+        "published": true,
+        "author": "Markoz Peña"
     }
 ]
