@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-- 🔭 I’m currently working at Terapify as Software Enginner
+- 🔭 I’m currently working at [Terapify](https://www.elespanol.com/invertia/disruptores-innovadores/america-tech/mexico/20210426/terapify-plataforma-ofrece-psicologos-online-espanol-asequibles/575193033_0.html) as Front-End Developer
 - 👨‍💻 I'm currently collaborating with ▲Vercel on vercel cli and Next.js
 - 💬 Ask me about web performance and optimization
 - ⚡ Fun fact: I love anime
