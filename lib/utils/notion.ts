@@ -12,8 +12,6 @@ export async function getSlugNotion() {
     }
   );
   const data = await res.json();
-  console.log('halo');
-  console.log(data);
   return data.map((item: any) => {
     return {
       params: {
