@@ -21,13 +21,13 @@ const About = () => (
             Currently working at{' '}
             <a
               className="underline"
-              href="https://getwos.co/explora"
+              href="https://www.terapify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              workoutos
+              Terapify
             </a>{' '}
-            as Software Enginner, and I&apos;m collaborator very active in the
+            as Front-End Enginner, and I&apos;m collaborator very active in the
             OSS projects{' '}
             <a
               href="https://vercel.com/"

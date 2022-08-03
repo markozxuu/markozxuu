@@ -15,7 +15,7 @@ export async function getSlugNotion() {
   return data.map((item: any) => {
     return {
       params: {
-        slug: item.Slug.toString(),
+        slug: String(item.Slug),
       },
     };
   });
@@ -46,7 +46,7 @@ export async function getBlogIndex(id: any) {
   const data = await res.json();
   return data.filter((item: any) => {
     const { Slug } = item;
-    const slug = Slug.toString();
+    const slug = String(Slug);
     return slug === id;
   });
 }

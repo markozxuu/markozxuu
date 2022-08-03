@@ -22,13 +22,26 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@lib/*": ["lib/*"],
-      "@data/*": ["data/*"],
-      "@public/*": ["public/*"],
-      "@typings/*": ["typings/*"]
-    }
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@data/*": [
+        "data/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@typings/*": [
+        "typings/*"
+      ]
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules"
