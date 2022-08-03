@@ -25,7 +25,7 @@ const About = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Terapif
+              Terapify
             </a>{' '}
             as Front-End Enginner, and I&apos;m collaborator very active in the
             OSS projects{' '}
