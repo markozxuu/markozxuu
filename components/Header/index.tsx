@@ -44,7 +44,7 @@ const Header = () => {
           </a>
         </Link>
         <div className="flex items-center space-x-5 mt-5 md:mt-0">
-          <Link href="/blogkmkswksmws">
+          <Link href="/blog">
             <a className="mr-2 font-medium">Blog</a>
           </Link>
           <Select />
