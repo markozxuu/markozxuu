@@ -37,22 +37,22 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@types/lodash.debounce": "^4.0.6",
-    "@types/lodash.throttle": "^4.1.6",
-    "@types/node": "^16.11.11",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/lodash.throttle": "^4.1.7",
+    "@types/node": "^18.7.13",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.37",
+    "@types/react": "^18.0.17",
     "@types/rss": "^0.0.29",
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
-    "@typescript-eslint/parser": "^5.5.0",
-    "@vercel/ncc": "^0.32.0",
-    "eslint": "<8.0.0",
-    "eslint-config-next": "^12.0.4",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.5.0",
-    "typescript": "^4.5.2"
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "8.23.0",
+    "eslint-config-next": "^12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2"
   }
 }
