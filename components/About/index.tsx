@@ -8,7 +8,7 @@ const About = () => (
   <div className={s.root}>
     <div className={s.container}>
       <div className="lg:px-4">
-        <h1 className="lg:text-4xl text-2xl text-gray-900 dark:text-white font-bold">
+        <h1 className="text-2xl font-bold text-gray-900 lg:text-4xl dark:text-white">
           Hi there, I&apos;m Markoz <span className={s.wave}>👋🏼</span>
         </h1>
         <div className="mt-4 text-[#212121] dark:text-[#eaeaea]">
@@ -31,11 +31,11 @@ const About = () => (
             OSS projects{' '}
             <a
               href="https://vercel.com/"
-              className="font-bold dark:text-white text-black"
+              className="font-bold text-black dark:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
-              ▲ Vercel
+              ▲ Vercelll
             </a>{' '}
             helping to improve products like Next.js and vercel cli.
           </p>
