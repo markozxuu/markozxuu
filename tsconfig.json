@@ -31,15 +31,9 @@
       "@lib/*": [
         "lib/*"
       ],
-      "@data/*": [
-        "data/*"
-      ],
       "@public/*": [
         "public/*"
       ],
-      "@typings/*": [
-        "typings/*"
-      ]
     },
     "incremental": true
   },
