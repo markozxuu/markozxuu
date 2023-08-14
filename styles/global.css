@@ -1,5 +1,4 @@
 @tailwind base;
-@import './font.css';
 
 body {
     text-rendering: optimizeLegibility;
