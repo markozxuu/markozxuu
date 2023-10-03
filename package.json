@@ -14,7 +14,6 @@
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
-    "@next/font": "13.5.3",
     "@tailwindcss/line-clamp": "0.4.4",
     "autoprefixer": "10.4.16",
     "clsx": "2.0.0",
