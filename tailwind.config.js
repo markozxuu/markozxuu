@@ -3,10 +3,14 @@ module.exports = {
   darkMode: 'class', // 'media' or 'class'
   purge: ['./components/**/*.tsx', './app/**/*.tsx'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/line-clamp')],
 };
