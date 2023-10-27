@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google';
 
+import { Header } from '@components/commons/Header';
+
 import '../styles/global.css';
 
 export const metadata = {
@@ -20,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable}`}>
+      <Header />
       <body>{children}</body>
     </html>
   );
