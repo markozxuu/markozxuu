@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 
-import { Header } from '@components/commons/Header';
+import Header from '@components/commons/Header';
 
 import '../styles/global.css';
 
