@@ -1,7 +1,9 @@
-const Header = () => {
+import { FC } from 'react';
+
+const Header: FC = () => {
   return (
     <div>
-      <p>sksks</p>
+      <p>header</p>
     </div>
   );
 };
