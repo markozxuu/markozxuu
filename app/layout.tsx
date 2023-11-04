@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google';
-
 import Header from '@components/commons/Header';
-
-import '../styles/global.css';
+import './global.css';
 
 export const metadata = {
   title: 'Next.js',
