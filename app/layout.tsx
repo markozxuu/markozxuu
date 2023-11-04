@@ -1,3 +1,4 @@
+import { ReactNode, FC } from 'react';
 import { Inter } from 'next/font/google';
 import Header from '@components/commons/Header';
 import './global.css';
@@ -13,15 +14,17 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" className={`${inter.variable}`}>
       <Header />
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
