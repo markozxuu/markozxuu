@@ -1,8 +1,0 @@
-{
-  "env": {
-    "es6": true,
-    "node": true,
-    "browser": true
-  },
-  "extends": ["next", "next/core-web-vitals", "plugin:prettier/recommended"]
-}
