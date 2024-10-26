@@ -8,6 +8,18 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
-    "husky": "9.1.6"
+    "@types/node": "22.8.0",
+    "@types/react": "18.3.12",
+    "husky": "9.1.6",
+    "lint-staged": "15.2.10",
+    "oxlint": "0.10.2",
+    "typescript": "5.6.3"
+  },
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint",
+    "prepare": "husky"
   }
 }
