@@ -1,5 +1,5 @@
-import React from 'react'
 import Card from './ui/home/card'
+import React from 'react'
 
 function IndexPage() {
   let a = 1
