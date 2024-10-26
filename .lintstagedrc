@@ -1,6 +1,7 @@
 {
   "**/*.{js,jsx,ts,tsx}": ["oxlint"],
   "**/*.{js,jsx,ts,tsx,json,css}": [
-    "biome check --write --no-errors-on-unmatched"
+    "biome format --write",
+    "biome lint --write --no-errors-on-unmatched"
   ]
 }
