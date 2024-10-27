@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import './css/globals.css'
 
 function Layout({ children }: { children: ReactNode }) {
   return (
