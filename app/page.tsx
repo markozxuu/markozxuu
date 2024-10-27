@@ -4,7 +4,7 @@ import Card from './ui/home/card'
 function IndexPage() {
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Hellssso</h1>
       <Card />
     </div>
   )
