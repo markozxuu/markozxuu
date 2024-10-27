@@ -1,11 +1,14 @@
 'use client'
-import Image from 'next/image'
+import { useEffect } from 'react'
 
 function Card() {
+  useEffect(() => {
+    console.log('Card')
+  }, [])
+
   return (
     <div>
-      <h1>Card ssss</h1>
-      <Image src="https://via.placeholder.com/150" alt="placeholder" />
+      <h1 className="text-red-600">Card ssss</h1>
     </div>
   )
 }
