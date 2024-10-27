@@ -16,6 +16,7 @@
   },
   "rules": {
     "import/no-cycle": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "no-img-element": "error"
   }
 }
