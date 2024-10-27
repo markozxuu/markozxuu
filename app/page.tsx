@@ -2,11 +2,9 @@ import React from 'react'
 import Card from './ui/home/card'
 
 function IndexPage() {
-  let a = 1
-
   return (
     <div>
-      <h1>Hello Worlwwwd</h1>
+      <h1>Hello Worlsswwwd</h1>
       <Card />
     </div>
   )
