@@ -2,7 +2,6 @@ name: Formatted code
 
 on:
   push:
-  pull_request:
 
 jobs:
   quality:
