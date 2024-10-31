@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  style_validation:
+  formatting_check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
