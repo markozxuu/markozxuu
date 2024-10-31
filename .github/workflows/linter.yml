@@ -1,8 +1,10 @@
 name: Code quality
 
 on:
-  push:
-  pull_request:
+  workflow_run:
+    workflows: ["Formatted code"]
+    types:
+      - completed
 
 jobs:
   oxlint:
