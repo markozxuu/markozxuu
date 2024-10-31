@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  biome_formatter:
+  style_validation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
