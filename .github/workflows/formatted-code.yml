@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  quality:
+  biome_formatter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
