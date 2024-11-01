@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npx --yes oxlint@0.0.0 --deny-warnings # change to the latest release
+      - run: npx --yes oxlint@0.10.2 --deny-warnings
