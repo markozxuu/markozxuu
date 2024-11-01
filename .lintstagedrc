@@ -1,0 +1,6 @@
+{
+  "**/*.{js,jsx,ts,tsx}": ["oxlint -c oxlintrc.json --tsconfig tsconfig.json"],
+  "**/*.{js,jsx,ts,tsx,json,css}": [
+    "biome check --write --unsafe --no-errors-on-unmatched"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "import",
+    "nextjs",
+    "vitest",
+    "jsx-a11y",
+    "react-perf",
+    "node",
+    "security"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "rules": {
+    "import/no-cycle": "error",
+    "no-unused-vars": "error",
+    "no-img-element": "error"
+  }
+}

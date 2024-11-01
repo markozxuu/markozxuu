@@ -1,0 +1,11 @@
+name: Code Quality Assurance
+
+on:
+  push:
+
+jobs:
+  oxlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx --yes oxlint@0.10.2 --deny-warnings
