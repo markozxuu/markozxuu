@@ -1,4 +1,3 @@
 {
-  "oxc.enable": true,
-  "conventionalCommits.scopes": ["dependencies"]
+  "oxc.enable": true
 }
