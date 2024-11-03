@@ -29,6 +29,7 @@
     "start": "next start",
     "lint": "oxlint -c oxlintrc.json --tsconfig tsconfig.json",
     "format": "biome format --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "vitest"
   }
 }
