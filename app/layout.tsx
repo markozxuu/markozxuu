@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 
 // Import global styles
 import './css/globals.css'
+import Header from './ui/header'
 
 export const metadata: Metadata = {
   title: 'My App :D',
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
