@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-
-// Import global styles
-import './css/globals.css'
+// Components
 import Header from './ui/header'
+// Global styles
+import './css/globals.css'
 
 export const metadata: Metadata = {
   title: 'My App :D',
