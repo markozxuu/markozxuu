@@ -4,11 +4,13 @@
 
 @layer base {
   :root {
-    color-scheme: dark light;
+    color-scheme: light dark;
   }
 
   body {
-    @apply bg-black flex justify-center;
+    background: #050505;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
   }
 }
