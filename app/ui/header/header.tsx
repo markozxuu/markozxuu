@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center py-3 w-[1120px]">
+    <header className="flex justify-between items-center py-3 w-[1120px] mx-auto">
       <Image
         className="rounded-full w-12 h-12"
         src="/images/me.jpg"
