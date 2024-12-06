@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Badge from './ui/badge/badge'
+import Badge from './ui/badge'
 
 function IndexPage() {
   return (
