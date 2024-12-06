@@ -24,13 +24,13 @@ function IndexPage() {
             <Badge>No disponible para trabajar</Badge>
           </a>
         </h1>
-        <h2 className="text-xl opacity-80">
+        <h2 className="text-2xl opacity-80 text-wrap">
           +5 años de experiencia. Desarollador Web. De Veracruz, México 🇲🇽.
           Especializado en crear aplicaciones altamente escalables.
         </h2>
 
         <ul>
-          <li>markoz</li>
+          <li></li>
         </ul>
       </section>
     </main>
