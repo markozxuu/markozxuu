@@ -1,16 +1,8 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center py-3 w-[1120px] mx-auto">
-      <Image
-        className="rounded-full w-12 h-12"
-        src="/images/me.jpg"
-        width={48}
-        height={48}
-        alt="Logo"
-      />
+    <header className="flex justify-center items-center py-3 w-[1120px] mx-auto">
       <nav className="flex flex-row gap-x-10 opacity-80">
         <Link href="">Home</Link>
         <Link href="">Projects</Link>
