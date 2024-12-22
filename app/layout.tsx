@@ -3,7 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 // Components
-import Header from './ui/header'
+import Header from './ui/header/header'
 // Global styles
 import './css/globals.css'
 
