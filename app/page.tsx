@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import Badge from './ui/badge'
+// Icons
+import Github from './icons/github'
+import LinkedIn from './icons/linkedIn'
+// Components
+import Badge from './ui/badge/badge'
 
 function IndexPage() {
   return (
@@ -24,13 +28,39 @@ function IndexPage() {
             <Badge>No disponible para trabajar</Badge>
           </a>
         </h1>
-        <h2 className="text-2xl opacity-80 text-wrap">
-          +5 años de experiencia. Desarollador Web. De Veracruz, México 🇲🇽.
-          Especializado en crear aplicaciones altamente escalables.
+        <h2 className="text-2xl text-wrap">
+          <span>+4 años de experiencia. </span>
+          <span className=" text-yellow-200/90">
+            Desarollador Web y divulador
+          </span>
+          . <span className=" text-red-200/90">De Veracruz, México 🇲🇽 </span>.
+          <span className="opacity-75">
+            {' '}
+            Especializado en crear aplicaciones altamente escalables.
+          </span>
         </h2>
 
         <ul>
-          <li></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/markozpena/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+              <LinkedIn className="w-6 h-6" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/markozpena/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <Github className="w-6 h-6" />
+            </a>
+          </li>
         </ul>
       </section>
     </main>
