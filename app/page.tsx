@@ -5,6 +5,7 @@ import Github from './icons/github'
 import LinkedIn from './icons/linkedIn'
 // Components
 import Badge from './ui/badge/badge'
+import SocialPill from './ui/social-pill/social-pill'
 
 function IndexPage() {
   return (
@@ -40,28 +41,17 @@ function IndexPage() {
           </span>
         </h2>
 
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/markozpena/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-              <LinkedIn className="w-6 h-6" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/markozpena/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-              <Github className="w-6 h-6" />
-            </a>
-          </li>
-        </ul>
+        <nav className="flex gap-x-2 mt-8">
+          <SocialPill link="https://www.linkedin.com/in/markozpena/">
+            LinkedIn
+            <LinkedIn className="w-6 h-6" />
+          </SocialPill>
+
+          <SocialPill link="https://github.com/markozxuu">
+            GitHub
+            <Github className="w-6 h-6" />
+          </SocialPill>
+        </nav>
       </section>
     </main>
   )
