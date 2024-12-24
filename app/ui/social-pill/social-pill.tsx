@@ -1,10 +1,20 @@
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 
-const SocialPill: FC = () => {
+interface SocialPillProps {
+  children: ReactNode
+  link: string
+}
+
+const SocialPill: FC<SocialPillProps> = ({ children, link }) => {
   return (
-    <div className="flex items-center gap-2 bg-gray-100/50 rounded-lg p-2">
-      <p>jskks</p>
-    </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:scale-110 hover:bg-white/10 transition"
+    >
+      {children}
+    </a>
   )
 }
 
