@@ -5,11 +5,13 @@ import Github from './icons/github'
 import LinkedIn from './icons/linkedIn'
 // Components
 import Badge from './ui/badge/badge'
+import Experience from './ui/experience/experience'
 import SocialPill from './ui/social-pill/social-pill'
 
 function IndexPage() {
   return (
     <main>
+      spsppsp
       <section className="w-full mx-auto lg:w-[740px] py-44">
         <Image
           className="rounded-full w-12 h-12 mb-4"
@@ -52,6 +54,9 @@ function IndexPage() {
             <Github className="size-6" />
           </SocialPill>
         </nav>
+      </section>
+      <section>
+        <Experience />
       </section>
     </main>
   )
