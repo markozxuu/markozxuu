@@ -8,8 +8,10 @@ import Header from './ui/header/header'
 import './css/globals.css'
 
 export const metadata: Metadata = {
-  title: 'My App :D',
-  description: 'My app description',
+  title:
+    'Portafolio Markoz - Desarollador y progamador web con +4 años de experiencia',
+  description:
+    'Contrata a Markoz para crear tu aplicación web o movil. Desarrollador web y divulgador. Especializado en crear aplicaciones web unicas.',
 }
 
 function Layout({ children }: { children: ReactNode }) {
