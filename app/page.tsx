@@ -41,15 +41,15 @@ function IndexPage() {
           </span>
         </h2>
 
-        <nav className="flex gap-x-2 mt-8">
+        <nav className="flex gap-x-4 mt-8">
           <SocialPill link="https://www.linkedin.com/in/markozpena/">
             LinkedIn
-            <LinkedIn className="w-6 h-6" />
+            <LinkedIn className="size-6" />
           </SocialPill>
 
           <SocialPill link="https://github.com/markozxuu">
             GitHub
-            <Github className="w-6 h-6" />
+            <Github className="size-6" />
           </SocialPill>
         </nav>
       </section>
