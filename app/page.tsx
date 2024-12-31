@@ -55,7 +55,7 @@ function IndexPage() {
           </SocialPill>
         </nav>
       </Container>
-      <Container>
+      <Container className="py-20">
         <Experience />
       </Container>
     </main>
