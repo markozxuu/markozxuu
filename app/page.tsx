@@ -56,7 +56,7 @@ function IndexPage() {
           </SocialPill>
         </nav>
       </Container>
-      <Container>
+      <Container id="experience">
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-x-3">
           <Briefcase className="size-7" />
           Experiencia laboral
