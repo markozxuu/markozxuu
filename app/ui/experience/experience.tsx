@@ -3,8 +3,8 @@ import ExperienceItem from '../experience-item/experience-item'
 const EXPERIENCE = [
   {
     id: '1',
-    date: 'February 2022',
-    title: 'Application UI code in Tailwind CSS',
+    date: 'Currently',
+    title: 'Frontend Enginner, Foris AI',
     description:
       'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
     link: '#',
