@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Briefcase from './icons/briefcase'
 // Icons
 import Github from './icons/github'
 import LinkedIn from './icons/linkedIn'
@@ -12,7 +13,7 @@ import SocialPill from './ui/social-pill/social-pill'
 function IndexPage() {
   return (
     <main>
-      <Container>
+      <Container className="py-44 pb-20">
         <Image
           className="rounded-full w-12 h-12 mb-4"
           src="/images/me.jpg"
@@ -55,7 +56,11 @@ function IndexPage() {
           </SocialPill>
         </nav>
       </Container>
-      <Container className="py-20">
+      <Container>
+        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-x-3">
+          <Briefcase className="size-7" />
+          Experiencia laboral
+        </h2>
         <Experience />
       </Container>
     </main>
