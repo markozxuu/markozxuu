@@ -4,9 +4,10 @@ const Header = () => {
   return (
     <header className="flex justify-center items-center py-3 w-[1120px] mx-auto">
       <nav className="flex flex-row gap-x-10 opacity-80">
-        <Link href="">Home</Link>
-        <Link href="">Projects</Link>
-        <Link href="">About</Link>
+        <Link href="#top">Home</Link>
+        <Link href="#experience">Experiencia</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#about">About</Link>
       </nav>
     </header>
   )
