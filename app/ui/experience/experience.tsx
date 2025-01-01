@@ -26,7 +26,7 @@ const EXPERIENCE = [
 ]
 
 const Experience = () => (
-  <ol className="relative border-s border-gray-200 dark:border-gray-700">
+  <ol className="relative border-s border-gray-200 ml-3">
     {EXPERIENCE.map((experience) => (
       <li className="mb-10 ms-4" key={experience.id}>
         <ExperienceItem {...experience} />
