@@ -12,7 +12,7 @@ import SocialPill from './ui/social-pill/social-pill'
 
 function IndexPage() {
   return (
-    <main>
+    <main className="px-4">
       <Container className="py-44 pb-20">
         <Image
           className="rounded-full w-12 h-12 mb-4"
@@ -21,7 +21,7 @@ function IndexPage() {
           height={48}
           alt="Logo"
         />
-        <h1 className="text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
           Hey, soy Markoz
           <a
             href="https://www.linkedin.com/in/markozpena/"
@@ -32,7 +32,7 @@ function IndexPage() {
             <Badge>No disponible para trabajar</Badge>
           </a>
         </h1>
-        <h2 className="text-2xl text-wrap">
+        <h2 className="text-xl lg:text-2xl text-wrap max-w-[700px]">
           <span>+4 años de experiencia. </span>
           <span className=" text-yellow-200/90">
             Desarollador Web y divulador
@@ -44,15 +44,15 @@ function IndexPage() {
           </span>
         </h2>
 
-        <nav className="flex gap-x-4 mt-8">
+        <nav className="flex gap-4 mt-8 flex-wrap">
           <SocialPill link="https://www.linkedin.com/in/markozpena/">
+            <LinkedIn className="size-4 md:size-6" />
             LinkedIn
-            <LinkedIn className="size-6" />
           </SocialPill>
 
           <SocialPill link="https://github.com/markozxuu">
+            <Github className="size-4 md:size-6" />
             GitHub
-            <Github className="size-6" />
           </SocialPill>
         </nav>
       </Container>
