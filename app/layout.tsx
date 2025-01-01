@@ -2,6 +2,7 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import Footer from './ui/footer/footer'
 // Components
 import Header from './ui/header/header'
 // Global styles
@@ -24,6 +25,7 @@ function Layout({ children }: { children: ReactNode }) {
           <div className="relative z-10">
             <Header />
             {children}
+            <Footer />
           </div>
         </div>
       </body>
