@@ -57,7 +57,7 @@ function IndexPage() {
         </nav>
       </Container>
       <Container id="experience">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-x-3">
+        <h2 className="text-3xl font-semibold mb-4 flex items-center gap-x-3">
           <Briefcase className="size-7" />
           Experiencia laboral
         </h2>
