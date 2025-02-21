@@ -17,6 +17,7 @@
   "rules": {
     "import/no-cycle": "error",
     "no-unused-vars": "error",
-    "no-img-element": "error"
+    "no-img-element": "error",
+    "jsx-a11y/anchor-is-valid": "warn"
   }
 }
