@@ -1,15 +1,17 @@
-import type { FC, ReactNode } from 'react'
+import clsx from 'clsx'
+import React, { ReactNode, forwardRef } from 'react'
 
-interface ContainerProps {
+interface OuterContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   className?: string
-  id?: string
 }
 
-const Container: FC<ContainerProps> = ({ children, className, id }) => (
-  <section id={id} className={`${className} w-full mx-auto lg:w-[740px] pb-24`}>
-    {children}
-  </section>
+export const OuterContainer = forwardRef<HTMLDivElement, OuterContainerProps>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <div ref={ref} className={clsx('sm:px-8', className)} {...props}>
+        <div className="mx-auto max-w-7xl lg:px-8">{children}</div>
+      </div>
+    )
+  },
 )
-
-export default Container
