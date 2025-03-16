@@ -12,6 +12,7 @@ const Footer = () => (
               <NavLink href="/about">About</NavLink>
               <NavLink href="/blog">Blog</NavLink>
               <NavLink href="/proyect">Projects</NavLink>
+              <NavLink href="/proyect">RSS</NavLink>
             </div>
             <p className="text-sm text-zinc-400 dark:text-zinc-500">
               Markoz Peña (@markozxuu)
