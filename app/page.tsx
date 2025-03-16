@@ -6,7 +6,7 @@ import Github from './icons/github'
 import LinkedIn from './icons/linkedIn'
 // Components
 import Badge from './ui/badge/badge'
-import Container from './ui/container/container'
+import { Container } from './ui/container/container'
 import Experience from './ui/experience/experience'
 import SocialPill from './ui/social-pill/social-pill'
 
