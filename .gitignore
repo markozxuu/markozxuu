@@ -12,3 +12,6 @@ yarn-error.log*
 
 # macOS
 .DS_Store
+
+# Million Lint
+.million
