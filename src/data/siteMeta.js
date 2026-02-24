@@ -18,32 +18,40 @@ const siteMeta = {
 }
  export const resume = [
     {
-      company: 'Amazon',
-      title: 'Principal Developer Advocate',
-      start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      company: 'Foris.AI',
+      logo: '/logos/foris.png',
+      title: 'Frontend Engineer',
+      start: 'Abr 2023',
+      end: 'Sept 2025',
     },
     {
-      company: 'Microsoft',
-      title: 'Principal Cloud Developer Advocate',
-      start: '2017',
-      end: '2022',
+      company: 'Terapify',
+      logo: '/logos/terapify.png',
+      title: 'Front-End Developer',
+      start: 'Abr 2022',
+      end: 'Nov 2022',
     },
     {
-      company: 'XOR Data Exchange',
-      title: 'CIO',
-      start: '2014',
-      end: '2016',
+      company: 'Scape',
+      logo: '/logos/scape.png',
+      title: 'Software Engineering',
+      start: 'Dic 2022',
+      end: 'Mar 2022',
     },
     {
-      company: 'Clarity Services, Inc.',
-      title: 'COO',
-      start: '2008',
-      end: '2014',
+      company: 'wOS',
+      logo: '/logos/getwos.png',
+      title: 'Software Engineering',
+      start: 'Ago 2021',
+      end: 'Nov 2021',
     },
+    {
+      company: 'Diametra Labs',
+      logo: '/logos/diametra.png',
+      title: 'Front-End Developer',
+      start: 'Jun 2020',
+      end: 'Ago 2021',
+    }
   ]
 export const projects = [
   {
