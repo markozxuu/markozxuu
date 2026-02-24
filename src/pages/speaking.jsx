@@ -56,7 +56,7 @@ intro="My talks focus on practical architecture decisions, trade-offs, and lesso
   href="https://ccoss.org/speakers/markoz-pena/"
   title="Modern Frontend & Deployment with Vercel"
   description="Technical session on modern frontend architecture and deployment workflows, presented in collaboration with ▲Vercel. Focused on performance, developer experience, and production-ready patterns."
-  event="CCOSS — Guadalajara, Mexico (2019, with Vercel)"
+  event="CCOSS — Guadalajara, Mexico (with Vercel) • 2019"
   cta="View details"
 />
 
@@ -64,7 +64,7 @@ intro="My talks focus on practical architecture decisions, trade-offs, and lesso
   href="#"
   title='What is "Static Site Generation"?'
   description="Opening talk for Google Developers Group Guadalajara’s online event. A deep dive into Static Site Generation within the Jamstack ecosystem and its role in modern frontend architectures."
-  event="Google Developers Group Guadalajara — Online (2020)"
+  event="Google Developers Group Guadalajara — Online • 2020"
   cta="View event"
 />
 
@@ -72,7 +72,7 @@ intro="My talks focus on practical architecture decisions, trade-offs, and lesso
   href="https://flisol.info/FLISOL2019/Mexico/Veracruz"
   title="Server-Side Rendering vs Client-Side Rendering"
   description="A practical comparison between SSR and CSR, covering performance trade-offs, SEO implications, and architectural considerations in real-world frontend applications."
-  event="FLISOL Veracruz (2019)"
+  event="FLISOL — Veracruz, Mexico • 2019"
   cta="View event"
 />
 
