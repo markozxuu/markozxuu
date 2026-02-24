@@ -93,7 +93,7 @@ export default function About() {
             I’m Markoz. For over four years, I’ve been building production-ready applications with React and modern tooling. I care about clean architecture and clear naming — because good software should feel simple, even when it isn’t.
               </p>
               <p>
-              I’ve been close to the Open Source world (especially around the Vercel ecosystem), and that builder mindset still shapes how I approach every project.
+              I’ve been close to the Open Source world (especially around the ▲Vercel ecosystem), and that builder mindset still shapes how I approach every project.
               </p>
               <h2 className='text-2xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl'>What you can expect when working with me</h2>
               <p>
