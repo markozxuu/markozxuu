@@ -8,7 +8,6 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
 } from '@/components/SocialIcons'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
@@ -122,10 +121,7 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
-                Follow on Mastodon
+                Follow on X
               </SocialLink>
               <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
