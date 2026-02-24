@@ -2,7 +2,7 @@
 const siteMeta = {
     title: "Brian Ketelsen",
     description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
-    copyright: "Brian Ketelsen, CC-BY-SA",
+    copyright: "Markoz Peña",
     author: {
         name: "Brian Ketelsen",
         email: "markdrew53@gmail.com",
