@@ -5,7 +5,7 @@ const siteMeta = {
     copyright: "Brian Ketelsen, CC-BY-SA",
     author: {
         name: "Brian Ketelsen",
-        email: "me@brian.dev",
+        email: "markdrew53@gmail.com",
         twitter: "https://twitter.com/bketelsen",
         mastodon: "https://tty0.social/@bketelsen",
         instagram: "https://instagram.com/bketelsen",
