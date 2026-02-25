@@ -7,6 +7,8 @@ const siteMeta = {
         name: "Markoz Peña",
         email: "markdrew53@gmail.com",
         x: "https://x.com/markozxuu",
+        // Alias for legacy `twitter` usage in components
+        twitter: "https://x.com/markozxuu",
         github: "https://github.com/markozxuu",
         linkedin: "https://www.linkedin.com/in/markozpena/",
     },
