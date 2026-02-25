@@ -1,0 +1,71 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Markoz Peña',
+  date: '2021-10-25',
+  title: 'The best of Next.js Conf',
+    description:
+    'A breakdown of the most exciting announcements from Next.js Conf, including Middleware, the new Rust-based compiler (SWC), React Server Components, Live collaboration, and improved deployment checks.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+Well certainly everything that was shown seems good to me, nevertheless I'm going to highlight that most interesting.
+
+## **Middleware**
+
+This gives you full flexibility in Next.js because you can run code before a request is completed. If you think carefully is one step before `getStaticProps` in case that use approach SSG. Based on the user's incoming request, you can modify the response by rewriting, redirecting etc.
+
+To use Middleware, you can create a file `pages/_middleware.js` this is a feature Nex.js v12. 
+
+```jsx
+import type { NextRequest } from 'next/server'
+import redirects from '@lib/redirects'
+
+export async function middleware(req: NextRequest) {
+  return await redirects(req)
+}
+```
+
+![Screen Shot 2021-10-28 at 21.38.24.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d4681cd-4b39-4758-860f-03ea337096a3/Screen_Shot_2021-10-28_at_21.38.24.png)
+
+## Checks
+
+Helps us create better experiences for our users, Vercel automatically keeps an eye on various aspects of your web application. Checks are powered by [Integrations](https://vercel.com/docs/integrations#introduction/vercel-integrations), which allow you to connect any third-party service of your choice with Vercel. 
+
+If you'd like to perform Reliability or Performance Tests (including custom End-to-End-Tests) with [Checkly Integration](https://vercel.com/integrations/checkly) it would be the most ideal even you can [**Building Your Own Checks](https://vercel.com/docs/concepts/deployments/checks#building-your-own-checks).**
+
+[running-checks-preview.avif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce614c6a-e6da-48f7-987a-01c0fcc8401c/running-checks-preview.avif)
+
+## The Figma for developers (Live)
+
+I know the title might sound a bit pretentious, but that's the way I see it and probably people refer to it as well. In order to enable this, `/_live` is added, which then redirects to a subdomain.
+
+Featured:
+
+- Chat
+- Draw
+- Join
+
+This runs entirely within the browser, server responses have less latency than localhost. We can make any changes from the browser, this is possible by technologies such as ES Modules, Service Workers, and WebAssembly.
+
+Obviously this works for projects that are built in Next.js, **it is currently in beta**, and we can test it with [templates previously selected](https://vercel.com/live) by the Vercel team, but the idea is that we can use it in any project.
+
+![browser.webp](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0e9c9a4-39fb-4e98-8997-87cfb0b8dff6/browser.webp)
+
+## New compiler
+
+Optimization is one of the things that I like the most with the new version of Next.js v12, a new compiler is introduced, it is based on SWC that is written in Rust with this, it opens up a sale possibility. I'm excited about what the next related improvements will be in this area. Although webpack is still used for the bundle process, this is a great step for what is to come in the future.
+
+Compilation using Rust is **20x faster than Babel** and enabled by default using Next.js 12, replacing transforming JavaScript and TypeScript files. This meant we had to port the Babel transformations in Next.js to Rust, including a **brand new CSS parser in Rust**
+
+![swc-1.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1af88803-40f2-4643-aa4c-febff81f03f0/swc-1.jpg)
+
+## **React Server Components**
+
+The first things we must be clear about is that this is not new adoption like is CSR, SSR, SSG and ISR. React Server component was announced December 21, 2020. 
+
+The idea in general is quite simple to tell React that this component is not dynamic and since it is not, it will not be included in the bundle of our application, preventing the user from downloading the js of that component. This is still in alpha phase, but Next.js will end up adopting it much earlier  than the React itself.
+
+https://www.youtube.com/watch?v=WlP2TB2ORL4&ab_channel=Vercel
