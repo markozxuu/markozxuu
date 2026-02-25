@@ -59,14 +59,14 @@ export const projects = [
     logo: '/projects/vercel.png',
     description:
       'Migrated multiple CLI commands to TypeScript and implemented a res.redirect() helper for the Node runtime, improving server-side response ergonomics within the Vercel core repository.',
-    link: { href: 'https://github.com/vercel/vercel', label: 'github.com/vercel/vercel' },
+    link: { href: 'https://github.com/vercel/vercel/pull/4947', label: 'github.com/vercel/vercel' },
   },
   {
     name: 'Next.js',
     logo: '/projects/nextjs.png',
     description:
       'Improved redirect error messaging and contributed refinements related to server response handling and static file serving.',
-    link: { href: 'https://github.com/vercel/next.js', label: 'github.com/vercel/next.js' },
+    link: { href: 'https://github.com/vercel/next.js/pull/15844', label: 'github.com/vercel/next.js' },
   },
   {
     name: 'Hyper',
