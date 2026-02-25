@@ -5,7 +5,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
+  XIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
@@ -142,12 +142,12 @@ export default function Home({ articles }) {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href={siteMeta.author.twitter}
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
+              href={siteMeta.author.x}
+              aria-label="Follow on X"
+              icon={XIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href={siteMeta.author.github}
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
