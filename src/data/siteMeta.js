@@ -1,20 +1,16 @@
 
 const siteMeta = {
-    title: "Brian Ketelsen",
-    description: "Brian Ketelsen is a developer advocate, keynote speaker, author, and open source practitioner.",
-    copyright: "Markoz Peña",
+    title: "Markoz Peña",
+    description:
+    "Frontend engineer focused on building performant, scalable web applications with React and Next.js. Passionate about clean architecture, developer experience, and long-term thinking.",    copyright: "Markoz Peña",
     author: {
-        name: "Brian Ketelsen",
+        name: "Markoz Peña",
         email: "markdrew53@gmail.com",
-        twitter: "https://twitter.com/bketelsen",
-        mastodon: "https://tty0.social/@bketelsen",
-        instagram: "https://instagram.com/bketelsen",
-        github: "https://github.com.com/bketelsen",
-        linkedin: "https://linkedin.com/in/brianketelsen",
-        twitch: "https://twitch.tv/bketelsen",
-        youtube: "https://youtube.com/@bketelsen",
+        x: "https://x.com/markozxuu",
+        github: "https://github.com/markozxuu",
+        linkedin: "https://www.linkedin.com/in/markozpena/",
     },
-    siteUrl: "https://brian.dev"
+    siteUrl: "https://markozxuu.vercel.app"
 }
  export const resume = [
     {
