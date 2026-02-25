@@ -1,0 +1,84 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Markoz Peña',
+  date: '2020-05-17',
+  title: 'Rendering on the Web',
+  description:
+  'An overview of Server-Side Rendering, Client-Side Rendering, and Pre-Rendering — comparing performance, SEO, caching, and user experience trade-offs in modern web applications.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+We currently have a variety of strategies for representing our content. From the beginning of the web, we had a website that was written in PHP and that its strategy was **server side render (SSR)**. This may come as a surprise to you, but this is the oldest strategy on the entire list.ss
+
+## What is server side render ?
+
+> "Server side rendering has actually been around since the existence of server programming languages such as Java, PHP, Python, and Ruby"
+> 
+
+The objective of this approach is to deliver a complete html to the client this approach is good because it does not give you a blank page when making the initial request on the website of your choice. 
+
+Pros **✅**
+
+- SEO-Friendly sites: by delivering a complete html the google robots can read our page before it is loaded to the client
+- Fast initial request
+
+Cons
+
+- Cannot be cached like static files
+
+## What is client side render ?
+
+**This approach, I think is the least recommended,** unless you did something fancy that is a hybrid between client side render and server side render then it is a good option. The objective of this strategy renders the content until the server request has been completed, this will make you see a blank page in case your connection don't be so fast. We are in an era where we use frameworks like Angular, Vue and React to build applications for our users, the problem is that our html looks like this:
+
+```js
+
+import { useState } from 'react';
+
+export default function App() {
+  let [color, setColor] = useState('red');
+  return (
+    <div>
+      <input value={color} onChange={(e) => setColor(e.target.value)} />
+      <p style={{ color }}>Hello, world!</p>
+      <ExpensiveTree />
+    </div>
+  );
+}
+
+function ExpensiveTree() {
+  let now = performance.now();
+  while (performance.now() - now < 100) {
+    // Artificial delay -- do nothing for 100ms
+  }
+  return <p>I am a very slow component tree.</p>;
+}
+```
+
+this is not a good thing for SEO another disadvantage is that if you **disable js from the browser** of your choice your web application built with the framework will stop working
+
+Pros ✅
+
+- SPA applications: this is possible by making the router on the client side instead of the server
+- Store static files and distribute them on CDN
+
+Cons
+
+- Blank page on slow connections
+- Bad SEO
+- Cannot interact if you disable js
+
+## What is Pre-Rendering ?
+
+This is a relatively new approach and it is adopted by frameworks like **Next.js**. Each generated HTML is associated with minimal JavaScript code necessary for that page. When a page is loaded by the browser, its JavaScript code runs and makes the page fully interactive. (This process is called **hydration**.)
+
+**NOTE:** this approach isn't perfect, but it's certainly the one with the best performance metrics
+
+Pros ✅
+
+- SEO-Friendly
+- Interactive page, even with js disabled
+- Fast initial request
+- Possibility to store static files and distribute them on CDN
