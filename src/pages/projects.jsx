@@ -1,4 +1,5 @@
 import Image from 'next/future/image'
+import cx from 'clsx'
 import { NextSeo } from 'next-seo';
 
 import { Card } from '@/components/Card'
@@ -54,7 +55,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className={cx('w-8 h-8', project.logo === '/projects/swr.png' && 'rounded-full bg-white')}
                   width={200}
                   height={200}
                   unoptimized
