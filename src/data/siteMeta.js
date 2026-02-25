@@ -55,24 +55,31 @@ const siteMeta = {
   ]
 export const projects = [
   {
+    name: 'Vercel CLI',
+    logo: '/projects/vercel.png',
+    description:
+      'Migrated multiple CLI commands to TypeScript and implemented a res.redirect() helper for the Node runtime, improving server-side response ergonomics within the Vercel core repository.',
+    link: { href: 'https://github.com/vercel/vercel', label: 'github.com/vercel/vercel' },
+  },
+  {
     name: 'Next.js',
     logo: '/projects/nextjs.png',
     description:
-      'Contributed a redirect helper for API Routes to improve server-side response handling ergonomics.',
+      'Improved redirect error messaging and contributed refinements related to server response handling and static file serving.',
     link: { href: 'https://github.com/vercel/next.js', label: 'github.com/vercel/next.js' },
   },
   {
     name: 'Hyper',
     logo: '/projects/hyper.png',
     description:
-      'Co-created Hyper Store, the official distribution hub for themes within the Hyper ecosystem.',
+      'Contributed feature development, search functionality, UI refinements, plugin documentation updates, and ecosystem improvements including work related to the Hyper Store distribution experience.',
     link: { href: 'https://github.com/vercel/hyper', label: 'github.com/vercel/hyper' },
   },
   {
     name: 'SWR',
     logo: '/projects/swr.png',
     description:
-      'Contributed to Spanish localization and documentation improvements.',
+      'Led Spanish internationalization efforts and improved documentation, translations, and content clarity across the SWR site.',
     link: { href: 'https://github.com/vercel/swr-site/tree/main', label: 'github.com/vercel/swr-site' },
   },
 ]
