@@ -29,22 +29,8 @@ export default function Speaking() {
   return (
     <>
     <NextSeo
-      title="Speaking - Brian Ketelsen"
+      title="Speaking - Markoz Peña"
       description={siteMeta.description}
-      canonical="https://brian.dev/speaking"
-      openGraph={{
-        url: 'https://brian.dev/speaking',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=Speaking&desc=I’ve spoken at events all around the world and been interviewed for many podcasts.`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
     />
       <SimpleLayout
 title="I’ve spoken at national engineering events."
