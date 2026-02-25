@@ -69,7 +69,7 @@ export const projects = [
     link: { href: 'https://github.com/vercel/hyper', label: 'github.com/vercel/hyper' },
   },
   {
-    name: 'SWC',
+    name: 'SWR',
     logo: '/projects/swr.png',
     description:
       'Contributed to Spanish localization and documentation improvements.',
