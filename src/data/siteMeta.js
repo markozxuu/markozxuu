@@ -55,37 +55,26 @@ const siteMeta = {
   ]
 export const projects = [
   {
-    name: 'Fleek',
+    name: 'Next.js',
+    logo: '/projects/nextjs.png',
     description:
-      'Install and manage all the tools you need to be productive.',
-    link: { href: 'https://getfleek.dev', label: 'getfleek.dev' },
+      'Contributed a redirect helper for API Routes to improve server-side response handling ergonomics.',
+    link: { href: 'https://github.com/vercel/next.js', label: 'github.com/vercel/next.js' },
   },
   {
-    name: 'Vanilla OS',
+    name: 'Hyper',
+    logo: '/projects/hyper.png',
     description:
-      'Vanilla OS is an immutable and atomic Ubuntu Linux-based Point Release distribution, that receives updates at the right time, neither before nor after, without sacrificing security and functionality.',
-    link: { href: 'https://vanillaos.org', label: 'vanillaos.org' },
+      'Co-created Hyper Store, the official distribution hub for themes within the Hyper ecosystem.',
+    link: { href: 'https://github.com/vercel/hyper', label: 'github.com/vercel/hyper' },
   },
   {
-    name: 'Captain Hook',
+    name: 'SWC',
+    logo: '/projects/swr.png',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'https://github.com/bketelsen/captainhook', label: 'github.com' },
+      'Contributed to Spanish localization and documentation improvements.',
+    link: { href: 'https://github.com/swc-project/swc', label: 'github.com/swc-project/swc' },
   },
-  {
-    name: 'Kubernetes',
-    description:
-      'Production-Grade Container Scheduling and Management',
-    link: { href: 'https://github.com/kubernetes/kubernetes', label: 'github.com' },
-  },
-  {
-    name: 'Go',
-    description:
-      'Build fast, reliable, and efficient software at scale',
-    link: { href: 'https://go.dev', label: 'go.dev' },
-  },
-
-
 ]
 
 

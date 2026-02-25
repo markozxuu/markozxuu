@@ -17,8 +17,8 @@ function LinkIcon(props) {
 }
 
 export default function Projects() {
-  const headline = "Things I’ve made trying to put my mark on the universe."
-  const intro="I’ve worked on tons of little projects over the years, but these are the ones that I’m most proud of. If you see something that piques your interest, check it out via the link below. While you're there, feel free to contribute any ideas that would make it better. Remember: Open source!"
+  const headline = "Selected Work"
+  const intro = "A curated selection of independent projects and contributions to the open source ecosystem, focused on frontend architecture, tooling, and developer experience."
 
   return (
     <>
@@ -55,6 +55,8 @@ export default function Projects() {
                   src={project.logo}
                   alt=""
                   className="h-8 w-8"
+                  width={200}
+                  height={200}
                   unoptimized
                 />
               </div>
