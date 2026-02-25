@@ -26,20 +26,6 @@ export default function Work() {
     <NextSeo
       title="Work - Markoz Peña"
       description={siteMeta.description}
-      canonical="https://brian.dev/projects"
-      openGraph={{
-        url: 'https://brian.dev/projects',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=Projects&desc=${headline}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
     />
       <SimpleLayout
         title={headline}
