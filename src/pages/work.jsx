@@ -17,14 +17,14 @@ function LinkIcon(props) {
   )
 }
 
-export default function Projects() {
-  const headline = "Selected Work"
-  const intro = "A curated selection of independent projects and contributions to the open source ecosystem, focused on frontend architecture, tooling, and developer experience."
+export default function Work() {
+  const headline = "Open Source Contributions"
+  const intro = "Core contributions to widely used open source tools, focused on TypeScript migrations, CLI tooling, runtime improvements, and developer experience."
 
   return (
     <>
     <NextSeo
-      title="Projects - Brian Ketelsen"
+      title="Work - Markoz Peña"
       description={siteMeta.description}
       canonical="https://brian.dev/projects"
       openGraph={{
