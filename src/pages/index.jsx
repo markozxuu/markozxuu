@@ -10,7 +10,6 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 
-import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import  siteMeta, {resume} from '@/data/siteMeta'
@@ -132,20 +131,6 @@ export default function Home({ articles }) {
     <NextSeo
       title="Markoz Peña"
       description={siteMeta.description}
-      canonical="https://brian.dev/"
-      openGraph={{
-        url: 'https://brian.dev',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
     />
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
@@ -191,10 +176,6 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
   return {
     props: {
       articles: (await getAllArticles())
