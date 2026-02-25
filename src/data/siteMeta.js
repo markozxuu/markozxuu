@@ -73,7 +73,7 @@ export const projects = [
     logo: '/projects/swr.png',
     description:
       'Contributed to Spanish localization and documentation improvements.',
-    link: { href: 'https://github.com/swc-project/swc', label: 'github.com/swc-project/swc' },
+    link: { href: 'https://github.com/vercel/swr-site/tree/main', label: 'github.com/vercel/swr-site' },
   },
 ]
 
