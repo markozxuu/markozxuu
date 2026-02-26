@@ -4,13 +4,10 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
-  InstagramIcon,
+  XIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/brian-head.jpg'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
@@ -44,80 +41,72 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About - Brian Ketelsen"
+        title="About - Markoz Peña"
         description={siteMeta.description}
-        canonical="https://brian.dev/about"
-        openGraph={{
-          url: 'https://brian.dev/about',
-          images: [
-            {
-              url: `https://og.brian.dev/api/og?title=About&desc=${siteMeta.description}`,
-              width: 1200,
-              height: 600,
-              alt: 'Og Image Alt',
-              type: 'image/jpeg',
-            }
-          ],
-          siteName: 'brian.dev',
-        }}
       />
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
-                src={portraitImage}
+                src="/static/profile.jpg"
                 alt=""
-                sizes="(min-width: 1024px) 32rem, 20rem"
+                width={442}
+                height={442}
                 className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Brian Ketelsen. I live in Florida, where I help people
-              across the world learn the Cloud.
+              I’m Markoz Peña, a Software Engineer focused on frontend architecture based in Mexico 🇲🇽
             </h1>
             <div className="mt-6 text-lg prose space-y-7 dark:prose-invert text-zinc-600 dark:text-zinc-400">
               <p>
-                Howdy! Thanks for stopping by. I’m Brian and I’ve been doing technology
-                things since <a href="https://en.wikipedia.org/wiki/Acoustic_coupler">acoustic
-                  modem couplers</a> were a thing. I love Open Source and exploring different programming languages.
-                Some highlights about me and my activities:
+              I build modern, scalable web experiences that are clear, fast, and made to last.
               </p>
               <p>
-                <b>Army Veteran:</b> Bradley Fighting Vehicle Gunner, Infantry, 1st Armored Division
+              Hey{" "}
+              <span
+  className="inline-block origin-[70%_70%] animate-[wave_2.5s_ease-in-out_1]"
+  style={{
+    animationName: 'wave',
+  }}
+>
+  👋
+</span>{" "}
+            I’m Markoz. For over four years, I’ve been building production-ready applications with React and modern tooling. I care about clean architecture and clear naming — because good software should feel simple, even when it isn’t.
               </p>
               <p>
-                <b>Father of <s>four</s> five</b> with <s>19</s> 21 years difference between oldest and youngest child
+              I’ve been close to the Open Source world (especially around the ▲Vercel ecosystem), and that builder mindset still shapes how I approach every project.
+              </p>
+              <h2 className='text-2xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl'>What you can expect when working with me</h2>
+              <p>
+                <b>Clarity over complexity</b>
+                <br />
+                I design solutions that are easy to understand, maintain, and scale — not just quick fixes.              </p>
+              <p>
+                <b>Performance & experience</b>
+                <br />
+                Fast interfaces, smooth interactions (often pure CSS), and thoughtful user flows that feel intentional.              </p>
+              <p>
+                <b>Ownership & long-term thinking</b>
+                <br />
+                I treat projects like investments. I focus on structure, communication, and sustainability.              </p>
+              <p>
+                <b>Curiosity beyond the UI</b>
+                <br />
+                I enjoy understanding how systems work end-to-end, so the frontend isn’t isolated from the bigger picture.
               </p>
               <p>
-                <b>Co-founded GopherCon</b> <a href="https://gophercon.com">the largest conference for Go developers</a>.
-              </p>
-              <p>
-                <b>Co-authored</b> <a href="https://www.amazon.com/Go-Action-William-Kennedy/dp/1617291781">Go In Action</a> for Manning Publishing.
-              </p>
-              <p>
-                <b>Co-wrote</b> Skynet and SkyDNS with Erik St. Martin, which was eventually morphed into the DNS service discovery that powers Kubernetes.
-              </p>
-              <p>
-                <b>Contributed</b> to the largest projects that power the Internet. Go, Kubernetes, Etcd, and so many more.
-              </p>
-              <p>
-                I love Open Source, learning in public, and sharing what I learn with others.
+              I believe great software is built with clarity, responsibility, and long-term thinking.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href={siteMeta.author.twitter} icon={TwitterIcon}>
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink href={siteMeta.author.mastodon} icon={MastodonIcon} className="mt-4">
-                Follow on Mastodon
-              </SocialLink>
-              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
+              <SocialLink href={siteMeta.author.twitter} icon={XIcon}>
+                Follow on X
               </SocialLink>
               <SocialLink href={siteMeta.author.github} icon={GitHubIcon} className="mt-4">
                 Follow on GitHub

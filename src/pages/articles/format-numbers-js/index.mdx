@@ -1,0 +1,149 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Markoz Peña',
+  date: '2021-04-13',
+  title: 'How to format numbers in JavaScript?',
+  description:
+    'Learn how to format numbers natively in JavaScript using Intl.NumberFormat, avoiding external libraries while improving localization, currency formatting, and bundle size.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+A common problem we have in JavaScript is how we format the numbers, We have several solutions, we could choose to use npm packages like [numeraljs](http://numeraljs.com/) or [comma-number](https://github.com/elidoran/comma-number). Both solutions are good but in this article I will show you a native solution that we have in the language.
+
+## What is Intl ?
+
+The Intl object is the namespace for the ECMAScript Internationalization API, that provides us with the following functionalities:
+
+- `Intl.Collator()`
+- `Intl.DateTimeFormat()`
+- `Intl.NumberFormat()`
+
+Highlight some of the most important, as you will see we even have a method that allows us to format dates but this time we are only going to focus on the numbers if you want to know the complete list you can consult it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl). 
+
+## Browser Support
+
+It's all great, but you may be wondering about browser support and I don't blame you, that's important to keep in mind. The answer is simple, [modern browsers support this solution](https://caniuse.com/?search=Intl.%20NumberFormat).
+
+## Why Use Intl and not packages npm?
+
+The language is improving more, incorporating this type of functionalitys natively, This gives you a lot of flexibility because you can create your own utilities according to your needs and save yourself a little space npm packages. It is always good to reduce the size of our bundle as much as possible.
+
+## Real world example
+
+Suppose that you are interacting with an API such as [BigCommerce](https://developer.bigcommerce.com/) or [Shopify](https://shopify.dev/docs/storefront-api) to create your e-commerce with a headless approach, but this it returns a list of products whose price is not formatted.
+
+```jsx
+const products = [
+  {
+    title: 'macBook Pro',
+    model: '13-inch 2020',
+    price: 2798.98,
+  },
+  {
+     title: 'Play Station 5',
+     model: '0F5214X902',
+     price: 1000
+  },
+  {
+    title: 'Xbox Series X',
+    model: '0S5214T77',
+    price: 1300
+  },
+  {
+    title: 'iMac',
+    model: '21.5-inch 2020',
+    price: 2649.00
+  },
+  {
+     title: 'iPad Pro',
+     mode: '12.9-inch 2020',
+     price: 1649.00
+  },
+  {
+    title: 'iPhone 12 Pro Max',
+    model: '6.7-inch 2020',
+    price: 1399.00
+  }
+];
+
+```
+
+Our e-commerce handles prices in dollars, so we will do the following to show the symbol $
+
+```jsx
+const products = [...]
+
+const numberFormat = (number) => {
+  return new Intl.NumberForma('en-US', {
+     style: 'currency',
+     currency: 'USD'
+  }).format(number)
+}
+
+const productsWithPriceFormat = products.map((item) => {
+  item.price = numberFormat(item.price);
+  return item;
+})
+```
+
+## This would be the result
+
+```jsx
+ 
+[
+   {
+     title: 'macBook Pro',
+     model: '13-inch 2020',
+     price: "$2,798.98",
+   },
+   {
+     title: 'Play Station 5',
+     model: '0F5214X902',
+     price: "$1,000.00"
+  },
+  {
+     title: 'Xbox Series X',
+     model: '0S5214T77',
+     price: "$1,300.00"
+  },
+  {
+     title: 'iMac',
+     model: '21.5-inch 2020',
+     price: "$2,649.00"
+  },
+  {
+     title: 'iPad Pro',
+     mode: '12.9-inch 2020',
+     price: "$1,649.00"
+  },
+  {
+    title: 'iPhone 12 Pro Max',
+    model: '6.7-inch 2020',
+    price: "$1,399.00"
+  }
+];
+```
+
+## Delving into solution
+
+`Intl.NumberFormat` provides many options to customize how you will format the numbers, but we will limit ourselves to explaining only what was used in the previous code example.
+
+**locales**: A string with a [BCP 47 language tag i](https://github.com/libyal/libfwnt/wiki/Language-Code-identifiers)n case not specify return default locale of the browser.
+
+**options**: An object with some or all of the following properties
+
+- currency: The currency to use in currency formatting, Possible values are the currency codes, such as "USD" for the US dollar, "EUR" for the euro. See the full list [here](https://www.currency-iso.org/en/home/tables/table-a1.html)
+- style: The formatting style to use, the default is "decimal" but it can have these values:
+    - decimal
+    - currency
+    - percent
+    - unit
+
+**format**: method formats a number according to the locale and formatting options of this `Intl.NumberFormat` object return a string
+
+## Conclusion
+
+I hope this article has been useful to you, the intention is to show you a completely native solution that the language provides us. If you have any questions feel free to ask me on Twitter.
